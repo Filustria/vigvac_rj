@@ -20,7 +20,7 @@ Quatro marcas comerciais de imunizantes foram usadas neste período - AstraZenec
 <p>&nbsp;</p>
 
 
-```{r, warning=F, echo=F}
+```{r, warning=F, echo=F, message=F}
 
 library(tidyverse)
 library(kableExtra)
@@ -41,7 +41,7 @@ Abaixo estão as combinações de imunizantes distribuidos nas três doses feita
 <p>&nbsp;</p>
 
 
-```{r, warning=F, echo=F}
+```{r, warning=F, echo=F, message=F}
 
 load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\a.RData")
 
