@@ -1,0 +1,10 @@
+# Apresentação {-}
+
+
+Este relatório apresenta as análises realizadas no âmbito do estudo VIGVAC dentro do estado do Rio de Janeiro no ano de 2021.  
+
+Todas as análises compreende o período que inicia com a data de inauguração do calendário vacinal, em 19 de janeiro de 2021 e terminam no último dia da coorte de seguimento da população - 
+
+
+
+![Azulejaria Verde em Carne Viva (2000), Adriana Varejão](C:\\Users\\Adelson\\Desktop\\thesis\\shiny\\vigvac\\docs\\anualdesign-perola-imperfeita-20140908083854.jpg)
