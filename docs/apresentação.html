@@ -52,6 +52,8 @@
 <script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 <style type="text/css">
@@ -176,11 +178,1140 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="apresentação" class="section level1 unnumbered">
 <h1>Apresentação</h1>
+<p>
+ 
+</p>
 <p>Este relatório apresenta as análises realizadas no âmbito do estudo VIGVAC dentro do estado do Rio de Janeiro no ano de 2021.</p>
+<p>Todas as análises compreende o período que inicia com a data de inauguração do calendário vacinal, em 19 de janeiro de 2021 e terminam no último dia da coorte de seguimento da população -</p>
 <div class="figure">
 <img src="C:/Users/Adelson/Desktop/thesis/shiny/vigvac/docs/anualdesign-perola-imperfeita-20140908083854.jpg" alt="" />
 <p class="caption">Azulejaria Verde em Carne Viva (2000), Adriana Varejão</p>
 </div>
+<p>
+ 
+</p>
+<p>A variável sexo foi corrigida, de 412.697 indefinidos, restaram 35.931, quando combinadas as informações sobre sexo de todas as fontes do banco.</p>
+<p>Quatro marcas comerciais de imunizantes foram usadas neste período - AstraZeneca, Pfizer, Coronavac e Jansen.</p>
+<p>
+ 
+</p>
+<table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
+<caption>
+<span id="tab:unnamed-chunk-2">Table 1: </span>Número total de DOSES aplicadas no estado do Rio de Janeiro de acordo com a marca comercial
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Nome comercial
+</th>
+<th style="text-align:right;">
+Primeira dose
+</th>
+<th style="text-align:right;">
+Segunda dose
+</th>
+<th style="text-align:right;">
+Terceira dose
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+5168940
+</td>
+<td style="text-align:right;">
+3966133
+</td>
+<td style="text-align:right;">
+25413
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+3525976
+</td>
+<td style="text-align:right;">
+2924039
+</td>
+<td style="text-align:right;">
+16606
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+359356
+</td>
+<td style="text-align:right;">
+NA
+</td>
+<td style="text-align:right;">
+408
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+4365215
+</td>
+<td style="text-align:right;">
+2895260
+</td>
+<td style="text-align:right;">
+1688202
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+430687
+</td>
+<td style="text-align:right;">
+4064742
+</td>
+<td style="text-align:right;">
+12119545
+</td>
+</tr>
+</tbody>
+</table>
+<p>
+ 
+</p>
+<p>Abaixo estão as combinações de imunizantes distribuidos nas três doses feitas na população. Ainda há erros de registro, com pacientes tendo apenas a segunda ou terceira dose registradas.</p>
+<p>
+ 
+</p>
+<table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
+<caption>
+<span id="tab:unnamed-chunk-3">Table 2: </span>Número total de PRIMEIRAS DOSES aplicadas no estado do Rio de Janeiro de acordo com a marca comercial
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Primeira dose
+</th>
+<th style="text-align:left;">
+Segunda dose
+</th>
+<th style="text-align:left;">
+Terceira dose
+</th>
+<th style="text-align:right;">
+Número total
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+2212
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+9658
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+488081
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+3435475
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+34
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+24
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+2175
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+12143
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+139
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+40
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+1531
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+339111
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+1090
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+1011
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+35049
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+841153
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+29
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+107
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+2467
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+17367
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+15397
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+4456
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+207
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+1043830
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1837980
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+2
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+175
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+44823
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+2235
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+644
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+12
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+82844
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+473397
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+277
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+212
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+4
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+493
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+27
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+21
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+1048
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+357239
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+1
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+62
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+10383
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+64
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+7508
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+3333
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+327
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+8
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+6018
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+2499252
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+162
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+41
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+8009
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+1830035
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-AstraZeneca
+</td>
+<td style="text-align:right;">
+747
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Covid-19-Coronavac-Sinovac/Butantan
+</td>
+<td style="text-align:right;">
+268
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - Ad26.COV2.S - Janssen-Cilag
+</td>
+<td style="text-align:right;">
+131
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+Vacina covid-19 - BNT162b2 - BioNTech/Fosun Pharma/Pfizer
+</td>
+<td style="text-align:right;">
+16844
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:left;">
+NA
+</td>
+<td style="text-align:right;">
+412697
+</td>
+</tr>
+</tbody>
+</table>
 
 </div>
             </section>

@@ -1,10 +1,54 @@
 # Apresentação {-}
 
 
+<p>&nbsp;</p>
+
 Este relatório apresenta as análises realizadas no âmbito do estudo VIGVAC dentro do estado do Rio de Janeiro no ano de 2021.  
 
 Todas as análises compreende o período que inicia com a data de inauguração do calendário vacinal, em 19 de janeiro de 2021 e terminam no último dia da coorte de seguimento da população - 
 
-
-
 ![Azulejaria Verde em Carne Viva (2000), Adriana Varejão](C:\\Users\\Adelson\\Desktop\\thesis\\shiny\\vigvac\\docs\\anualdesign-perola-imperfeita-20140908083854.jpg)
+
+
+<p>&nbsp;</p>
+
+A variável sexo foi corrigida, de 412.697 indefinidos, restaram 35.931, quando combinadas as informações sobre sexo de todas as fontes do banco. 
+
+Quatro marcas comerciais de imunizantes foram usadas neste período - AstraZeneca, Pfizer, Coronavac e Jansen.   
+
+
+<p>&nbsp;</p>
+
+
+```{r, warning=F, echo=F}
+
+library(tidyverse)
+library(kableExtra)
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\d.RData")
+
+d %>% 
+  kbl(format = "html", caption = "Número total de DOSES aplicadas no estado do Rio de Janeiro de acordo com a marca comercial", 
+      col.names = c("Nome comercial", "Primeira dose", "Segunda dose", "Terceira dose")) %>% 
+  kable_paper("hover", full_width = F)
+```
+
+
+<p>&nbsp;</p>
+
+Abaixo estão as combinações de imunizantes distribuidos nas três doses feitas na população. Ainda há erros de registro, com pacientes tendo apenas a segunda ou terceira dose registradas.   
+
+<p>&nbsp;</p>
+
+
+```{r, warning=F, echo=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\a.RData")
+
+a %>% 
+  kbl(format = "html", caption = "Número total de PRIMEIRAS DOSES aplicadas no estado do Rio de Janeiro de acordo com a marca comercial", 
+      col.names = c("Primeira dose", "Segunda dose", "Terceira dose", "Número total")) %>% 
+  kable_paper("hover", full_width = F)
+
+```
+
