@@ -17,9 +17,12 @@ vacinados com Jansen receberam apenas uma dose da vacina, portanto contam apenas
 
 Todos os modelos de hazard proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, permitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações do indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, número de casos de COVID19 na semana vacinal)
 
+<p>&nbsp;</p>
+<p>&nbsp;</p>
 
-**Resultados para risco de contrair infecção por Sars-Cov-2**
+**Resultados das análises para risco de contrair infecção por Sars-Cov-2**
 
+<p>&nbsp;</p>
 
 ```{r, warning=F, echo=F, message=F}
 
@@ -32,4 +35,19 @@ vacinas_todas_gripe %>%
   footnote("Valor de referência é não ter tomado nenhuma dose da vacina.", "vacinados com Jansen receberam apenas uma dose da vacina", "Todos os modelos de hazar proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, \npermitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações \ndo indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, \nnúmero de casos de COVID19 na semana vacinal)")
 
 ```
+
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+**Resultados das análises para risco de ser hospitalizado por Sars-Cov-2**
+<p>&nbsp;</p>
+
+tabela
+tabela
+tabela
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+**Resultados das análises para risco de morrer por Sars-Cov-2**
+<p>&nbsp;</p>
 
