@@ -2,11 +2,13 @@
 
 Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos de hazard proporcionais. Foram analisadas aqui os imunizantes Pfizer, AstraZeneca, Coronavac e Jansen. As comparações foram feitas sempre tomando como referência o período que os indivíduos não haviam tomado nenhuma dose da vacina, contando a partir do dia 19 de janeiro, data da inauguração da campanha de vacinação. Desta forma, foram computados os seguintes **STATUS VACINAIS**
 
+<p>&nbsp;</p>
 
-1. Não vacinado - de 19 de janeiro até 13 dias após a primeira dose da vacina;
-2. Parcialmente vacinado - de 14 dias após a primeira dose da vacina até 13 dias após a segunda dose da vacina;
-3. Totalmente vacinado - 14 dias após a segunda dose da vacina até data final da coorte (2021-11-27).
+1. **Não vacinado** - de 19 de janeiro até 13 dias após a primeira dose da vacina;
+2. **Parcialmente vacinado** - de 14 dias após a primeira dose da vacina até 13 dias após a segunda dose da vacina;
+3. **Totalmente vacinado** - 14 dias após a segunda dose da vacina até data final da coorte (2021-11-27).
 
+<p>&nbsp;</p>
 
 vacinados com Jansen receberam apenas uma dose da vacina, portanto contam apenas dois períodos - não-vacinado versus totalmente vacinado.
 
