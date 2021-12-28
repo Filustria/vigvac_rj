@@ -21,7 +21,7 @@ Todos os modelos de hazard proporcionais tiveram o tempo modelado como variávei
 **Resultados para risco de contrair infecção por Sars-Cov-2**
 
 
-```{r}
+```{r, warning=F, echo=F, message=F}
 
 load("C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_todas_gripe.RData")
 
