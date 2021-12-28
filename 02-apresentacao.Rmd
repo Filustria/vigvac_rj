@@ -7,18 +7,17 @@
 
 <p>&nbsp;</p>
 
-Este relatório apresenta as análises realizadas no âmbito do estudo VIGVAC dentro do estado do Rio de Janeiro no ano de 2021.  
-
-Todas as análises compreende o período que inicia com a data de inauguração do calendário vacinal, em 19 de janeiro de 2021 e terminam no último dia da coorte de seguimento da população - 
 
 ![Azulejaria Verde em Carne Viva (2000), Adriana Varejão](C:\\Users\\Adelson\\Desktop\\bd vacinas\\relatorios\\vigvac\\docs\\013302031809.jpg)
 
 
+Este relatório apresenta as análises realizadas no âmbito do estudo VIGVAC dentro do estado do Rio de Janeiro no ano de 2021.  
+
+Todas as análises compreende o período que inicia com a data de inauguração do calendário vacinal, em 19 de janeiro de 2021 e terminam no último dia da coorte de seguimento da população - 2021-11-27
+
 <p>&nbsp;</p>
 
-A variável sexo foi corrigida, de 412.697 indefinidos, restaram 35.931, quando combinadas as informações sobre sexo de todas as fontes do banco. 
-
-Quatro marcas comerciais de imunizantes foram usadas neste período - AstraZeneca, Pfizer, Coronavac e Jansen.   
+A variável sexo foi corrigida, de 412.697 indefinidos, restaram 35.931, quando combinadas as informações sobre sexo de todas as fontes do banco. Quatro marcas comerciais de imunizantes foram usadas neste período - AstraZeneca, Pfizer, Coronavac e Jansen.   
 
 
 <p>&nbsp;</p>
