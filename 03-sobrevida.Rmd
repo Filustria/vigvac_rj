@@ -16,3 +16,20 @@ Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos 
 vacinados com Jansen receberam apenas uma dose da vacina, portanto contam apenas dois períodos - não-vacinado versus totalmente vacinado.
 
 Todos os modelos de hazard proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, permitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações do indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, número de casos de COVID19 na semana vacinal)
+
+
+**Resultados para risco de contrair infecção por Sars-Cov-2**
+
+
+```{r}
+
+load("C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_todas_gripe.RData")
+
+vacinas_todas_gripe %>% 
+  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados exclusivamente com AstraZeneca, Coronavac, Pfizer e Jansen entre Janeiro a Novembro de 2021.", 
+      col.names = c("Número de doses", "AstraZeneca", "Coronavac", "Pfizer", "Jansen")) %>% 
+  kable_paper("hover", full_width = F) %>%
+  footnote("Valor de referência é não ter tomado nenhuma dose da vacina.", "vacinados com Jansen receberam apenas uma dose da vacina", "Todos os modelos de hazar proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, \npermitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações \ndo indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, \nnúmero de casos de COVID19 na semana vacinal)")
+
+```
+
