@@ -106,9 +106,14 @@
             <section class="normal" id="section-">
 <div id="análises-de-sobrevida" class="section level1 unnumbered">
 <h1>Análises de Sobrevida</h1>
-<p>Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos de hazard proporcionais. Foram analisadas aqui os imunizantes Pfizer, AstraZeneca, Coronavac e Jansen. As comparações foram feitas sempre tomando como referência o período que os indivíduos não haviam tomado nenhuma dose da vacina, contando a partir do dia 19 de janeiro, data da inauguração da campanha de vacinação.</p>
-<p>Foram usadas commo variáveis independentes informações</p>
-<p>Valor de referência é não ter tomado nenhuma dose da vacina.“,”vacinados com Jansen receberam apenas uma dose da vacina“,”Todos os modelos de hazar proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, permitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações do indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, número de casos de COVID19 na semana vacinal)</p>
+<p>Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos de hazard proporcionais. Foram analisadas aqui os imunizantes Pfizer, AstraZeneca, Coronavac e Jansen. As comparações foram feitas sempre tomando como referência o período que os indivíduos não haviam tomado nenhuma dose da vacina, contando a partir do dia 19 de janeiro, data da inauguração da campanha de vacinação. Desta forma, foram computados os seguintes <strong>STATUS VACINAIS</strong></p>
+<ol style="list-style-type: decimal">
+<li>Não vacinado - de 19 de janeiro até 13 dias após a primeira dose da vacina;</li>
+<li>Parcialmente vacinado - de 14 dias após a primeira dose da vacina até 13 dias após a segunda dose da vacina;</li>
+<li>Totalmente vacinado - 14 dias após a segunda dose da vacina até data final da coorte (2021-11-27).</li>
+</ol>
+<p>vacinados com Jansen receberam apenas uma dose da vacina, portanto contam apenas dois períodos - não-vacinado versus totalmente vacinado.</p>
+<p>Todos os modelos de hazard proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, permitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações do indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, número de casos de COVID19 na semana vacinal)</p>
 
 </div>
             </section>
