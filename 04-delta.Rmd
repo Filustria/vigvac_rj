@@ -1,4 +1,4 @@
 # Efetividade vacinal variante DELTA {-}
 
 
-Análises comparando a efetividade vacinal no período pré e pós início de circulação da variante DELTA.
+Análises comparando a efetividade vacinal no período pré e pós início de circulação da variante DELTA. A data escolhida será o primeiro dia do mês de julho. Esta análise carece de especificidade quanto à variante, mas pode mostrar ao longo do tempo se houve mudança na efetividade das vacinas, à medida em que a variante delta se tornou mais dominante no cenário fluminense. 
