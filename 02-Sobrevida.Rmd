@@ -1,6 +1,11 @@
 # Análises de Sobrevida {-}
 
-Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos de hazard proporcionais. Foram analisadas aqui os imunizantes Pfizer, AstraZeneca, Coronavac e Jansen. As comparações foram feitas sempre tomando como referência o período que os indivíduos não haviam tomado nenhuma dose da vacina, contando a partir do dia 19 de janeiro, data da inauguração da campanha de vacinação. Desta forma, foram computados os seguintes **STATUS VACINAIS**
+
+
+
+![Havana, Cuba (1994). Miguel Rio Branco](C:\\Users\\Adelson\\Desktop\\bd vacinas\\relatorios\\vigvac\\docs\\par42150-overlay.jpg)
+
+Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos de *Hazard proporcionais*. Foram analisadas aqui os imunizantes Pfizer, AstraZeneca, Coronavac e Jansen. As comparações foram feitas sempre tomando como referência o período que os indivíduos não haviam tomado nenhuma dose da vacina, contando a partir do dia 19 de janeiro, data da inauguração da campanha de vacinação. Desta forma, foram computados os seguintes **STATUS VACINAIS**
 
 <p>&nbsp;</p>
 
