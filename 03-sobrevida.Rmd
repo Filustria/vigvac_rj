@@ -7,9 +7,11 @@ Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos 
 
 <p>&nbsp;</p>
 
-1. **Não vacinado** - de 19 de janeiro até 13 dias após a primeira dose da vacina;
-2. **Parcialmente vacinado** - de 14 dias após a primeira dose da vacina até 13 dias após a segunda dose da vacina;
-3. **Totalmente vacinado** - 14 dias após a segunda dose da vacina até data final da coorte (2021-11-27).
+1. **Pré vacinado** - de 19 de janeiro até o dia da primeira dose da vacina; 
+2. **Reference** - do dia da primeira dose até 13 dias após;
+3. **Parcialmente vacinado** - de 14 dias após a primeira dose da vacina até o dia da segunda dose da vacina;
+4. **Almost** - do dia da segunda dose até 13 dias após a segunda dose da vacina;
+5. **Totalmente vacinado** - 14 dias após a segunda dose da vacina até data final da coorte (2021-11-27).
 
 <p>&nbsp;</p>
 
@@ -18,6 +20,21 @@ vacinados com Jansen receberam apenas uma dose da vacina, portanto contam apenas
 Todos os modelos de hazard proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, permitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações do indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, número de casos de COVID19 na semana vacinal)
 
 <p>&nbsp;</p>
+
+**Incidência de infecção por Sars-Cov-2 dentre aqueles que receberam ao menos duas doses de AstraZeneca**
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\evento.pessoa.tempo.RData")
+
+evento.pessoa.tempo %>%
+  kbl(caption = "Incidência de casos de síndrome gripal dentre aqueles imunizados com AstraZeneca notificados de acordo com o Status vacinal do indivíduo no primeiro dia de sintomas. Estado do Rio de Janeiro, 2021") %>%
+  kable_paper("hover", full_width = F)
+
+```
+
+
+
 
 **Resultados das análises para risco de contrair infecção por Sars-Cov-2**
 
