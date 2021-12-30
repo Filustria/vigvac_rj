@@ -21,14 +21,14 @@ Todos os modelos de hazard proporcionais tiveram o tempo modelado como variávei
 
 <p>&nbsp;</p>
 
-**Incidência de infecção por Sars-Cov-2 dentre aqueles que receberam ao menos duas doses de AstraZeneca MAIS reforço com qualquer imunizante**
+**Incidência de infecção por Sars-Cov-2 dentre aqueles que receberam ao menos duas doses de AstraZeneca**
 
 ```{r, warning=F, echo=F, message=F}
 
-load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\eventopessoatempoAZ.RData")
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\evento.pessoa.tempo.RData")
 
 evento.pessoa.tempo %>%
-  kbl(caption = "Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de AstraZeneca nas duas primeiras doses e qualquer outro imunizante como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021") %>%
+  kbl(caption = "Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de AstraZeneca nas duas primeiras doses. Estado do Rio de Janeiro, 2021") %>%
   kable_paper("hover", full_width = F)
 
 
