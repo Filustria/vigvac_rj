@@ -7,11 +7,54 @@
 
 ```{r, warning=F, echo=F, message=F}
 
+library(tidyverse)
+library(kableExtra)
+
 load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\eventopessoatempoAZ.RData")
 
 evento.pessoa.tempo %>%
   kbl(caption = "Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de AstraZeneca nas duas primeiras doses e qualquer outro imunizante como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021") %>%
-  kable_paper("hover", full_width = F)
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "right")
 
 
 ```
+
+<p>&nbsp;</p>
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_tres.RData")
+
+
+vacinas_astra %>% 
+  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.", 
+      col.names = c("Status vacinal", "Hazard Ratio (95% CI)", "p value")) %>%
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "right")
+```
+
+<p>&nbsp;</p>
+
+```{r, warning=F, echo=F, message=F}
+
+a <- merge(evento.pessoa.tempo, vacinas_astra, by = "Status vacinal", all.x = T)
+
+a <- a %>%
+  mutate(seq = c(2,3,4,5,6,1)) %>%
+  arrange(seq) %>%
+  select(-seq, -`p value`, -preprint)
+
+a$`Hazard Ratio (95% CI)`[is.na(a$`Hazard Ratio (95% CI)`)] <- 1
+
+
+a %>% 
+  kbl(format = "html", caption = "Risco absoluto e Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.", 
+      col.names = c("Status vacinal", "Pessoa-dia", "número de eventos", "incidência", "Hazard Ratio (95% CI)")) %>%
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "right")
+
+
+```
+
+
+<p>&nbsp;</p>
+
+----
