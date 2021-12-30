@@ -34,6 +34,8 @@ vacinas_astra %>%
 
 <p>&nbsp;</p>
 
+**Tabela agregando informações de risco absoluto e Hazard Ratios (ainda usando Cox)**
+
 ```{r, warning=F, echo=F, message=F}
 
 a <- merge(evento.pessoa.tempo, vacinas_astra, by = "Status vacinal", all.x = T)
