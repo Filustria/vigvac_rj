@@ -19,6 +19,9 @@ Todas as análises compreende o período que inicia com a data de inauguração 
 
 ```{r, warning=F, echo=F, message=F}
 
+library(tidyverse)
+library(kableExtra)
+
 load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\cat_vacs.RData")
 
 cat_vacs %>% 

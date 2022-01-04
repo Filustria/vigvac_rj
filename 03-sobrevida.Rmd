@@ -25,6 +25,9 @@ Todos os modelos de hazard proporcionais tiveram o tempo modelado como variávei
 
 ```{r, warning=F, echo=F, message=F}
 
+library(tidyverse)
+library(kableExtra)
+
 load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\evento.pessoa.tempo.RData")
 
 evento.pessoa.tempo %>%
