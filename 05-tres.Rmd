@@ -21,6 +21,10 @@ evento.pessoa.tempo %>%
 
 <p>&nbsp;</p>
 
+Modelos gerados em comparações binárias, sempre o período pré-vacinação como referência comparado com os status vacinais seguintes.
+
+<p>&nbsp;</p>
+
 ```{r, warning=F, echo=F, message=F}
 
 load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_tres.RData")
