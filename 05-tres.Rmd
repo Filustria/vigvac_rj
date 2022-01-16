@@ -81,11 +81,13 @@ vacinas_astra_todo %>%
 
 ```
 
+<p>&nbsp;</p>
 
 **Análises estratificadas por idade**
 
+Aqui os mesmos modelos de Cox foram gerados, ajustados por tamanho da população do local de moradia, idade e sexo do indivíduo.
 
-
+<p>&nbsp;</p>
 
 ```{r, warning=F, echo=F, message=F}
 
