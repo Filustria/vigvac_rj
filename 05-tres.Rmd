@@ -74,9 +74,6 @@ Modelo de Cox único ajustado por sexo, idade e tamanho da população no local 
 
 load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_todo.RData")
 
-write.table(vacinas_astra_todo, "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_todo.csv", 
-            dec = ",", sep = ";", row.names = FALSE)
-
 vacinas_astra_todo %>% 
   kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio", 
       col.names = c("Status vacinal", "Hazard Ratio (95% CI)", "p value")) %>%
@@ -84,6 +81,22 @@ vacinas_astra_todo %>%
 
 ```
 
+
+**Análises estratificadas por idade**
+
+
+
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_idades.RData")
+
+vacinas %>%
+  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio",
+      col.names = c("Status vacinal", "All ages", "18 - 30 years-old", "30 - 40 years-old", "40 - 50 years-old", "50 - 60 years-old", "60 - 70 years-old", "older than 70 years-old")) %>%
+  kable_paper(bootstrap_options = c("hover", "condensed"), font_size = 12)
+
+```
 
 
 ----
