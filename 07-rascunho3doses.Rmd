@@ -1,0 +1,32 @@
+# Rascunho artigo 3 doses {-}
+
+
+**INTRODUCTION**
+
+Evidências sobre efetividade vacinal na população brasileira.
+Novas variantes rotineiramente aparecendo no cenário mundial, com transmissibilidade e letalidade variáveis.
+Necessidade de avaliar se a efetividade vacinal perdura ao longo do tempo.
+Necessidade de imunização rotineira versus imunidade perene.  
+
+O objetivo deste estudo é avaliar a efetividade vacinal dos imunizantes AstraZeneca e Coronavac somados a terceira dose de reforço pela Pfizer no estado do Rio de Janeiro no ano de 2021.
+
+
+**METHODS**
+
+Cohortes de indivíduos que receberam uma ou duas doses AstraZeneca e Coronavac e indivíduos que receberam dose de reforço com Pfizer ao longo do ano de 2021 foram construidas. 
+Desfechos - Sídrome gripal confirmada por PCR, internação hospitalar e morte. 
+Exposições - Pré-vacinado, primeira dose, primeira dose + 14 dias, segunda dose, segunda dose + 14 dias, terceira dose em diante.
+A efetividade vacinal foi calculada por modelos de hazard proporcionais ajustados por sexo, idade do paciente e incidência de casos de Sars-Cov-2 em cada mês observado. 
+Efetividade vacinal estimada para a cada coorte de indivíduos e depois estratificada por grupos etários. 
+Modelos frailty foram gerados com amostras de indivíduos considerando clusters de pacientes em momentos distintos da coorte, ou seja, cada indivíduo terá cada período de contribuição em cada status vacinal agregado em um cluster - períodos de status vacinal aninhados por indivíduo. 
+
+
+
+
+**RESULTS**
+
+**DISCUSSION**
+
+**STRENGTHS AND WEAKNESSES**
+
+**CONCLUSION**

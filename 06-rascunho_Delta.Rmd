@@ -1,0 +1,22 @@
+# Rascunho artigo Delta {-}
+
+
+
+**INTRODUCTION**
+
+Evidências sobre efetividade vacinal na população brasileira.
+Novas variantes rotineiramente aparecendo no cenário mundial, com transmissibilidade e letalidade variáveis.
+Necessidade de avaliar se a efetividade vacinal para as primeiras variantes da doença ainda se mantém quanto uma nova variante é introduzida no ambiente.
+O objetivo deste estudo é avaliar a efetividade vacinal dos imunizantes em uso no território brasileiro em dois momentos distintos da pandemia: 01 de fevereiro a 31 de maio de 2021 - período em que a variante Gamma predominava - e 31 de julho a 27 de novembro - período em que a variante Delta predominava.
+
+**METHODS**
+
+Duas cohortes de indivíduos que receberam algum imunizante ao longo do ano de 2021 foram construidas, contemplando os dois períodos de análise descritos. Cada coorte contará com indivíduos que ainda não foram imunizados (não-vacinados) e com indivíduos que há 14 dias receberam a segunda dose do imunizante. A efetividade vacinal foi calculada por modelos de hazard proporcionais ajustados por sexo, idade do paciente e incidência de casos de Sars-Cov-2 em cada mês observado. Efetividades vacinais para cada período serão descritas e diferenças em efetividade serão calculadas.  
+
+**RESULTS**
+
+**DISCUSSION**
+
+**STRENGTHS AND WEAKNESSES**
+
+**CONCLUSION**

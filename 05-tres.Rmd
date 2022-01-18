@@ -3,6 +3,9 @@
 
 <p>&nbsp;</p>
 
+
+**AstraZeneca com reforço de Pfizer**
+
 **Incidência de infecção por Sars-Cov-2 dentre aqueles que receberam ao menos duas doses de AstraZeneca MAIS reforço com qualquer imunizante**
 
 ```{r, warning=F, echo=F, message=F}
@@ -27,13 +30,14 @@ Modelos gerados em comparações binárias, sempre o período pré-vacinação c
 
 ```{r, warning=F, echo=F, message=F}
 
-load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_tres.RData")
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_1.RData")
 
 
-vacinas_astra %>% 
-  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.", 
-      col.names = c("Status vacinal", "Hazard Ratio (95% CI)", "p value")) %>%
-  kable_styling(bootstrap_options = "striped", full_width = T, position = "right")
+vacinas_astra_1 %>% 
+  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021.", 
+      col.names = c("Status vacinal", "Hazard Ratio (95% CI)")) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F, position = "right", font_size = 14) %>%
+  add_footnote(c("Porcentagem: Porcentagem da população positiva no momento da vacina", "Valor de referência é não ter tomado nenhuma dose da vacina.", "Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina."), notation = "symbol")
 ```
 
 <p>&nbsp;</p>
@@ -42,12 +46,12 @@ vacinas_astra %>%
 
 ```{r, warning=F, echo=F, message=F}
 
-a <- merge(evento.pessoa.tempo, vacinas_astra, by = "Status vacinal", all.x = T)
+a <- merge(evento.pessoa.tempo, vacinas_astra_1, by = "Status vacinal", all.x = T)
 
 a <- a %>%
   mutate(seq = c(2,3,4,5,6,1)) %>%
   arrange(seq) %>%
-  select(-seq, -`p value`, -preprint)
+  select(-seq, -preprint)
 
 a$`Hazard Ratio (95% CI)`[is.na(a$`Hazard Ratio (95% CI)`)] <- 1
 
@@ -61,44 +65,112 @@ a %>%
 ```
 
 
-<p>&nbsp;</p>
-
-**Novo modelo**
 
 
-Modelo de Cox único ajustado por sexo, idade e tamanho da população no local de domicílio. 
-
-<p>&nbsp;</p>
-
-```{r, warning=F, echo=F, message=F}
-
-load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_todo.RData")
-
-vacinas_astra_todo %>% 
-  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio", 
-      col.names = c("Status vacinal", "Hazard Ratio (95% CI)", "p value")) %>%
-  kable_styling(bootstrap_options = "striped", full_width = T, position = "right")
-
-```
 
 <p>&nbsp;</p>
 
 **Análises estratificadas por idade**
 
-Aqui os mesmos modelos de Cox foram gerados, ajustados por tamanho da população do local de moradia, idade e sexo do indivíduo.
+Aqui os mesmos modelos de Cox foram gerados com o Status Vacinal como variável categórica em um único modelo, ajustados pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina, idade e sexo do indivíduo. Cada coluna representa um modelo para cada faixa etária.
 
 <p>&nbsp;</p>
 
 ```{r, warning=F, echo=F, message=F}
 
-load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_idades.RData")
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_idades_todas.RData")
+
+vacinas$`Status vacinal`[vacinas$`Status vacinal` == "Porcentagem da população positiva no momento da vacina"] <- "Porcentagem"
 
 vacinas %>%
-  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio",
+  kbl(format = "html", align = "l", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021. ",
+      col.names = c("Status vacinal", "All ages", "18 - 30", "30 - 40", "40 - 50", "50 - 60", "60 - 70", "> 70")) %>%
+  kable_paper(bootstrap_options = "striped", full_width = T, position = "right", font_size = 11) %>%
+  add_footnote(c("Porcentagem: Porcentagem da população positiva no momento da vacina", "Valor de referência é não ter tomado nenhuma dose da vacina.", "Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina."), notation = "symbol")
+
+
+
+```
+
+<p>&nbsp;</p>
+
+
+**Modelos frailty**
+
+<p>&nbsp;</p>
+
+
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\mostras_frailty.RData")
+
+
+mostras_frailty %>%
+  kbl(format = "html", caption = "Modelos de hazard proporcionais entre indivíduos totalmente vacinados (14 dias após a segunda dose de AstraZeneca) versus não vacinados (nenhuma dose) utilizando clusterização com Frailty para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.",
+      col.names = c("Modelos", "Hazard Ratio (IC 95%)")) %>%
+  kable_paper(bootstrap_options = c("hover", "condensed"), font_size = 12) %>%
+  add_footnote(c("Modelos frailty agregando dados agrupados por ID de indivíduos.", "Valor de referência é não ter tomado nenhuma dose da vacina.", "Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina."), notation = "symbol")
+```
+
+<p>&nbsp;</p>
+
+**Internações hospitalares**
+
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_internacao_AZ.RData")
+
+vacinas_internacao %>%
+  kbl(format = "html", caption = "Hazard Ratio (95% CI) para Internação Hospitalar por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio",
+      col.names = c("Status vacinal", "All ages", "18 - 30 years-old", "30 - 40 years-old", "40 - 50 years-old", "50 - 60 years-old", "60 - 70 years-old", "older than 70 years-old")) %>%
+  kable_paper(bootstrap_options = c("hover", "condensed"), font_size = 12) %>%
+  add_footnote(c("Valor de referência é não ter tomado nenhuma dose da vacina.", "Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina."), notation = "symbol")
+
+```
+
+<p>&nbsp;</p>
+
+**Coronavac com reforço de Pfizer**
+
+<p>&nbsp;</p>
+
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_coronavac_idades_todas.RData")
+
+
+
+vacinas_coronavac %>%
+  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de Coronavac + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio",
       col.names = c("Status vacinal", "All ages", "18 - 30 years-old", "30 - 40 years-old", "40 - 50 years-old", "50 - 60 years-old", "60 - 70 years-old", "older than 70 years-old")) %>%
   kable_paper(bootstrap_options = c("hover", "condensed"), font_size = 12)
 
 ```
+
+
+<p>&nbsp;</p>
+
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\mostras_frailty_coronavac.RData")
+
+mostras_frailty_coronavac %>%
+  kbl(format = "html", caption = "frailty Models - Modelos de hazard proporcionais entre indivíduos totalmente vacinados (14 dias após a segunda dose de Coronavac) versus não vacinados (nenhuma dose) utilizando clusterização com Frailty para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.",
+      col.names = c("Modelos", "Hazard Ratio (IC 95%)")) %>%
+  kable_paper(bootstrap_options = c("hover", "condensed"), font_size = 12) %>%
+  add_footnote(c("Modelos frailty agregando dados agrupados por ID de indivíduos.", "Valor de referência é não ter tomado nenhuma dose da vacina.", "Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina."), notation = "symbol")
+
+
+
+```
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
 
 
 ----

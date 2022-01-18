@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="efetividade-vacinal-variante-delta.html"/>
-<link rel="next" href="sharing-your-book.html"/>
+<link rel="next" href="rascunho-artigo-delta.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -73,13 +73,13 @@
 <li><a href="./">VIGVAC Rio de Janeiro</a></li>
 
 <li class="divider"></li>
-<li class="chapter" data-level="" data-path="section.html"><a href="section.html"><i class="fa fa-check"></i>…</a></li>
+<li class="chapter" data-level="" data-path="análises-de-efetividade-vacinal-no-estado-do-rio-de-janeiro.html"><a href="análises-de-efetividade-vacinal-no-estado-do-rio-de-janeiro.html"><i class="fa fa-check"></i>Análises de efetividade vacinal no estado do Rio de Janeiro</a></li>
 <li class="chapter" data-level="" data-path="apresentação.html"><a href="apresentação.html"><i class="fa fa-check"></i>Apresentação</a></li>
 <li class="chapter" data-level="" data-path="análises-de-sobrevida.html"><a href="análises-de-sobrevida.html"><i class="fa fa-check"></i>Análises de Sobrevida</a></li>
 <li class="chapter" data-level="" data-path="efetividade-vacinal-variante-delta.html"><a href="efetividade-vacinal-variante-delta.html"><i class="fa fa-check"></i>Efetividade vacinal variante DELTA</a></li>
 <li class="chapter" data-level="" data-path="três-doses.html"><a href="três-doses.html"><i class="fa fa-check"></i>Três doses</a></li>
-<li class="chapter" data-level="" data-path="sharing-your-book.html"><a href="sharing-your-book.html"><i class="fa fa-check"></i>Sharing your book</a></li>
-<li class="chapter" data-level="" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i>References</a></li>
+<li class="chapter" data-level="" data-path="rascunho-artigo-delta.html"><a href="rascunho-artigo-delta.html"><i class="fa fa-check"></i>Rascunho artigo Delta</a></li>
+<li class="chapter" data-level="" data-path="rascunho-artigo-3-doses.html"><a href="rascunho-artigo-3-doses.html"><i class="fa fa-check"></i>Rascunho artigo 3 doses</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -105,6 +105,7 @@
 <p>
  
 </p>
+<p><strong>AstraZeneca com reforço de Pfizer</strong></p>
 <p><strong>Incidência de infecção por Sars-Cov-2 dentre aqueles que receberam ao menos duas doses de AstraZeneca MAIS reforço com qualquer imunizante</strong></p>
 <table class="table table-striped" style="margin-right: 0; margin-left: auto">
 <caption>
@@ -241,9 +242,9 @@ NA
 <p>
  
 </p>
-<table class="table table-striped" style="margin-right: 0; margin-left: auto">
-<caption>
-<span id="tab:unnamed-chunk-8">Table 7: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.
+<table class="table table-striped" style="font-size: 14px; width: auto !important; margin-right: 0; margin-left: auto">
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-8">Table 7: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021.
 </caption>
 <thead>
 <tr>
@@ -253,9 +254,6 @@ Status vacinal
 <th style="text-align:left;">
 Hazard Ratio (95% CI)
 </th>
-<th style="text-align:left;">
-p value
-</th>
 </tr>
 </thead>
 <tbody>
@@ -264,10 +262,7 @@ p value
 1ª dose
 </td>
 <td style="text-align:left;">
-1.12 (1.11; 1.13)
-</td>
-<td style="text-align:left;">
-0
+1.09 (1.07; 1.12)
 </td>
 </tr>
 <tr>
@@ -275,10 +270,7 @@ p value
 1ª dose + 14 dias
 </td>
 <td style="text-align:left;">
-0.67 (0.67; 0.67)
-</td>
-<td style="text-align:left;">
-0
+0.66 (0.66; 0.67)
 </td>
 </tr>
 <tr>
@@ -286,10 +278,7 @@ p value
 2ª dose
 </td>
 <td style="text-align:left;">
-0.8 (0.79; 0.81)
-</td>
-<td style="text-align:left;">
-0
+0.85 (0.83; 0.87)
 </td>
 </tr>
 <tr>
@@ -297,10 +286,7 @@ p value
 2ª dose + 14 dias
 </td>
 <td style="text-align:left;">
-0.39 (0.38; 0.39)
-</td>
-<td style="text-align:left;">
-0
+0.41 (0.4; 0.41)
 </td>
 </tr>
 <tr>
@@ -308,13 +294,27 @@ p value
 3ª dose
 </td>
 <td style="text-align:left;">
-0.15 (0.15; 0.16)
-</td>
-<td style="text-align:left;">
-0
+0.21 (0.19; 0.23)
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Porcentagem: Porcentagem da população positiva no momento da vacina
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>†</sup> Valor de referência é não ter tomado nenhuma dose da vacina.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>‡</sup> Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina.
+</td>
+</tr>
+</tfoot>
 </table>
 <p>
  
@@ -375,7 +375,7 @@ Pré-vacinado
 0.3059905
 </td>
 <td style="text-align:left;">
-1.12 (1.11; 1.13)
+1.09 (1.07; 1.12)
 </td>
 </tr>
 <tr>
@@ -392,7 +392,7 @@ Pré-vacinado
 0.2434457
 </td>
 <td style="text-align:left;">
-0.67 (0.67; 0.67)
+0.66 (0.66; 0.67)
 </td>
 </tr>
 <tr>
@@ -409,7 +409,7 @@ Pré-vacinado
 0.2393434
 </td>
 <td style="text-align:left;">
-0.8 (0.79; 0.81)
+0.85 (0.83; 0.87)
 </td>
 </tr>
 <tr>
@@ -426,7 +426,7 @@ Pré-vacinado
 0.1355124
 </td>
 <td style="text-align:left;">
-0.39 (0.38; 0.39)
+0.41 (0.4; 0.41)
 </td>
 </tr>
 <tr>
@@ -443,7 +443,7 @@ Pré-vacinado
 0.0404753
 </td>
 <td style="text-align:left;">
-0.15 (0.15; 0.16)
+0.21 (0.19; 0.23)
 </td>
 </tr>
 </tbody>
@@ -451,14 +451,14 @@ Pré-vacinado
 <p>
  
 </p>
-<p><strong>Novo modelo</strong></p>
-<p>Modelo de Cox único ajustado por sexo, idade e tamanho da população no local de domicílio.</p>
+<p><strong>Análises estratificadas por idade</strong></p>
+<p>Aqui os mesmos modelos de Cox foram gerados com o Status Vacinal como variável categórica em um único modelo, ajustados pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina, idade e sexo do indivíduo. Cada coluna representa um modelo para cada faixa etária.</p>
 <p>
  
 </p>
-<table class="table table-striped" style="margin-right: 0; margin-left: auto">
-<caption>
-<span id="tab:unnamed-chunk-10">Table 9: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio
+<table class=" lightable-paper" style='font-size: 11px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-right: 0; margin-left: auto'>
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-10">Table 9: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021.
 </caption>
 <thead>
 <tr>
@@ -466,10 +466,25 @@ Pré-vacinado
 Status vacinal
 </th>
 <th style="text-align:left;">
-Hazard Ratio (95% CI)
+All ages
 </th>
 <th style="text-align:left;">
-p value
+18 - 30
+</th>
+<th style="text-align:left;">
+30 - 40
+</th>
+<th style="text-align:left;">
+40 - 50
+</th>
+<th style="text-align:left;">
+50 - 60
+</th>
+<th style="text-align:left;">
+60 - 70
+</th>
+<th style="text-align:left;">
+&gt; 70
 </th>
 </tr>
 </thead>
@@ -479,10 +494,25 @@ p value
 1ª dose
 </td>
 <td style="text-align:left;">
-0.83 (0.83; 0.84)
+0.81 (0.8; 0.83)
 </td>
 <td style="text-align:left;">
-0
+0.8 (0.76; 0.84)
+</td>
+<td style="text-align:left;">
+0.8 (0.77; 0.84)
+</td>
+<td style="text-align:left;">
+0.84 (0.81; 0.87)
+</td>
+<td style="text-align:left;">
+0.8 (0.78; 0.83)
+</td>
+<td style="text-align:left;">
+0.81 (0.78; 0.85)
+</td>
+<td style="text-align:left;">
+0.87 (0.79; 0.96)
 </td>
 </tr>
 <tr>
@@ -490,10 +520,25 @@ p value
 1ª dose + 14 dias
 </td>
 <td style="text-align:left;">
-0.66 (0.66; 0.67)
+0.65 (0.65; 0.66)
 </td>
 <td style="text-align:left;">
-0
+0.72 (0.7; 0.74)
+</td>
+<td style="text-align:left;">
+0.67 (0.65; 0.68)
+</td>
+<td style="text-align:left;">
+0.68 (0.66; 0.69)
+</td>
+<td style="text-align:left;">
+0.69 (0.68; 0.7)
+</td>
+<td style="text-align:left;">
+0.59 (0.57; 0.6)
+</td>
+<td style="text-align:left;">
+0.5 (0.48; 0.53)
 </td>
 </tr>
 <tr>
@@ -501,10 +546,25 @@ p value
 2ª dose
 </td>
 <td style="text-align:left;">
-0.59 (0.58; 0.6)
+0.62 (0.61; 0.64)
 </td>
 <td style="text-align:left;">
-0
+0.73 (0.68; 0.78)
+</td>
+<td style="text-align:left;">
+0.62 (0.59; 0.66)
+</td>
+<td style="text-align:left;">
+0.66 (0.63; 0.69)
+</td>
+<td style="text-align:left;">
+0.63 (0.61; 0.66)
+</td>
+<td style="text-align:left;">
+0.51 (0.48; 0.54)
+</td>
+<td style="text-align:left;">
+0.56 (0.5; 0.63)
 </td>
 </tr>
 <tr>
@@ -512,10 +572,25 @@ p value
 2ª dose + 14 dias
 </td>
 <td style="text-align:left;">
-0.38 (0.38; 0.38)
+0.4 (0.39; 0.4)
 </td>
 <td style="text-align:left;">
-0
+0.47 (0.46; 0.49)
+</td>
+<td style="text-align:left;">
+0.41 (0.4; 0.42)
+</td>
+<td style="text-align:left;">
+0.37 (0.36; 0.38)
+</td>
+<td style="text-align:left;">
+0.36 (0.35; 0.36)
+</td>
+<td style="text-align:left;">
+0.46 (0.45; 0.47)
+</td>
+<td style="text-align:left;">
+0.49 (0.46; 0.51)
 </td>
 </tr>
 <tr>
@@ -523,19 +598,228 @@ p value
 3ª dose
 </td>
 <td style="text-align:left;">
-0.12 (0.12; 0.13)
+0.16 (0.15; 0.18)
 </td>
 <td style="text-align:left;">
-0
+0.35 (0.23; 0.53)
+</td>
+<td style="text-align:left;">
+0.29 (0.21; 0.4)
+</td>
+<td style="text-align:left;">
+0.26 (0.18; 0.36)
+</td>
+<td style="text-align:left;">
+0.16 (0.12; 0.21)
+</td>
+<td style="text-align:left;">
+0.13 (0.11; 0.15)
+</td>
+<td style="text-align:left;">
+0.16 (0.14; 0.19)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Idade
+</td>
+<td style="text-align:left;">
+0.99 (0.99; 0.99)
+</td>
+<td style="text-align:left;">
+1.02 (1.02; 1.02)
+</td>
+<td style="text-align:left;">
+1 (0.99; 1)
+</td>
+<td style="text-align:left;">
+0.99 (0.98; 0.99)
+</td>
+<td style="text-align:left;">
+0.97 (0.97; 0.98)
+</td>
+<td style="text-align:left;">
+1.03 (1.03; 1.04)
+</td>
+<td style="text-align:left;">
+0.97 (0.97; 0.97)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Porcentagem
+</td>
+<td style="text-align:left;">
+1.11 (1.11; 1.12)
+</td>
+<td style="text-align:left;">
+1.14 (1.13; 1.14)
+</td>
+<td style="text-align:left;">
+1.14 (1.13; 1.14)
+</td>
+<td style="text-align:left;">
+1.12 (1.11; 1.12)
+</td>
+<td style="text-align:left;">
+1.11 (1.11; 1.11)
+</td>
+<td style="text-align:left;">
+1.1 (1.09; 1.1)
+</td>
+<td style="text-align:left;">
+1.12 (1.11; 1.12)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sexo
+</td>
+<td style="text-align:left;">
+0.82 (0.81; 0.82)
+</td>
+<td style="text-align:left;">
+0.69 (0.67; 0.7)
+</td>
+<td style="text-align:left;">
+0.81 (0.8; 0.82)
+</td>
+<td style="text-align:left;">
+0.82 (0.81; 0.84)
+</td>
+<td style="text-align:left;">
+0.84 (0.83; 0.85)
+</td>
+<td style="text-align:left;">
+0.86 (0.84; 0.87)
+</td>
+<td style="text-align:left;">
+1.16 (1.12; 1.21)
 </td>
 </tr>
 </tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Porcentagem: Porcentagem da população positiva no momento da vacina
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>†</sup> Valor de referência é não ter tomado nenhuma dose da vacina.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>‡</sup> Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina.
+</td>
+</tr>
+</tfoot>
 </table>
-<p><strong>Análises estratificadas por idade</strong></p>
-<p>Aqui os mesmos modelos de Cox foram gerados, ajustados por tamanho da população do local de moradia, idade e sexo do indivíduo.</p>
+<p>
+ 
+</p>
+<p><strong>Modelos frailty</strong></p>
+<p>
+ 
+</p>
 <table class=" lightable-paper" style='font-size: 12px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-11">Table 10: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio
+<span id="tab:unnamed-chunk-11">Table 10: </span>Modelos de hazard proporcionais entre indivíduos totalmente vacinados (14 dias após a segunda dose de AstraZeneca) versus não vacinados (nenhuma dose) utilizando clusterização com Frailty para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Modelos
+</th>
+<th style="text-align:left;">
+Hazard Ratio (IC 95%)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Full - tudo (sem frailty)
+</td>
+<td style="text-align:left;">
+0.4 (0.39; 0.4)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 5 (sem frailty)
+</td>
+<td style="text-align:left;">
+0.41 (0.4; 0.41)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 5
+</td>
+<td style="text-align:left;">
+0.51 (0.46; 0.56)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 4
+</td>
+<td style="text-align:left;">
+0.46 (0.42; 0.51)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 3
+</td>
+<td style="text-align:left;">
+0.44 (0.4; 0.49)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 2
+</td>
+<td style="text-align:left;">
+0.46 (0.41; 0.51)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 1
+</td>
+<td style="text-align:left;">
+0.5 (0.45; 0.55)
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Modelos frailty agregando dados agrupados por ID de indivíduos.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>†</sup> Valor de referência é não ter tomado nenhuma dose da vacina.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>‡</sup> Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina.
+</td>
+</tr>
+</tfoot>
+</table>
+<p>
+ 
+</p>
+<p><strong>Internações hospitalares</strong></p>
+<table class=" lightable-paper" style='font-size: 12px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-12">Table 11: </span>Hazard Ratio (95% CI) para Internação Hospitalar por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio
 </caption>
 <thead>
 <tr>
@@ -571,25 +855,25 @@ older than 70 years-old
 1ª dose
 </td>
 <td style="text-align:left;">
-0.83 (0.82; 0.84)
+1.75 (1.65; 1.85)
 </td>
 <td style="text-align:left;">
-0.82 (0.79; 0.84)
+1.28 (0.89; 1.85)
 </td>
 <td style="text-align:left;">
-0.82 (0.8; 0.83)
+1.66 (1.34; 2.04)
 </td>
 <td style="text-align:left;">
-0.84 (0.83; 0.86)
+2.09 (1.8; 2.43)
 </td>
 <td style="text-align:left;">
-0.83 (0.82; 0.85)
+2.02 (1.82; 2.24)
 </td>
 <td style="text-align:left;">
-0.87 (0.85; 0.89)
+1.79 (1.59; 2.01)
 </td>
 <td style="text-align:left;">
-0.91 (0.87; 0.96)
+1.18 (1.01; 1.37)
 </td>
 </tr>
 <tr>
@@ -597,25 +881,25 @@ older than 70 years-old
 1ª dose + 14 dias
 </td>
 <td style="text-align:left;">
-0.66 (0.66; 0.67)
+0.64 (0.62; 0.66)
 </td>
 <td style="text-align:left;">
-0.71 (0.7; 0.72)
+0.46 (0.37; 0.56)
 </td>
 <td style="text-align:left;">
-0.67 (0.66; 0.67)
+0.43 (0.39; 0.48)
 </td>
 <td style="text-align:left;">
-0.67 (0.66; 0.67)
+0.5 (0.46; 0.55)
 </td>
 <td style="text-align:left;">
-0.7 (0.69; 0.7)
+0.72 (0.68; 0.76)
 </td>
 <td style="text-align:left;">
-0.62 (0.62; 0.63)
+0.68 (0.64; 0.73)
 </td>
 <td style="text-align:left;">
-0.59 (0.57; 0.6)
+0.86 (0.79; 0.94)
 </td>
 </tr>
 <tr>
@@ -623,25 +907,25 @@ older than 70 years-old
 2ª dose
 </td>
 <td style="text-align:left;">
-0.59 (0.58; 0.6)
+0.45 (0.4; 0.49)
 </td>
 <td style="text-align:left;">
-0.68 (0.66; 0.71)
+0.25 (0.11; 0.54)
 </td>
 <td style="text-align:left;">
-0.57 (0.56; 0.59)
+0.35 (0.23; 0.51)
 </td>
 <td style="text-align:left;">
-0.62 (0.61; 0.63)
+0.32 (0.23; 0.43)
 </td>
 <td style="text-align:left;">
-0.61 (0.59; 0.62)
+0.47 (0.4; 0.56)
 </td>
 <td style="text-align:left;">
-0.48 (0.47; 0.5)
+0.45 (0.37; 0.55)
 </td>
 <td style="text-align:left;">
-0.6 (0.57; 0.64)
+0.6 (0.49; 0.74)
 </td>
 </tr>
 <tr>
@@ -649,25 +933,25 @@ older than 70 years-old
 2ª dose + 14 dias
 </td>
 <td style="text-align:left;">
-0.38 (0.38; 0.38)
+0.3 (0.29; 0.32)
 </td>
 <td style="text-align:left;">
-0.43 (0.43; 0.44)
+0.28 (0.2; 0.38)
 </td>
 <td style="text-align:left;">
-0.38 (0.37; 0.38)
+0.13 (0.1; 0.16)
 </td>
 <td style="text-align:left;">
-0.35 (0.34; 0.35)
+0.15 (0.13; 0.18)
 </td>
 <td style="text-align:left;">
-0.34 (0.34; 0.35)
+0.21 (0.2; 0.24)
 </td>
 <td style="text-align:left;">
-0.45 (0.45; 0.46)
+0.27 (0.24; 0.29)
 </td>
 <td style="text-align:left;">
-0.49 (0.48; 0.5)
+0.65 (0.6; 0.71)
 </td>
 </tr>
 <tr>
@@ -675,29 +959,468 @@ older than 70 years-old
 3ª dose
 </td>
 <td style="text-align:left;">
-0.12 (0.12; 0.13)
+0.12 (0.1; 0.15)
 </td>
 <td style="text-align:left;">
-0.27 (0.22; 0.33)
+0 (0; Inf)
 </td>
 <td style="text-align:left;">
-0.22 (0.19; 0.26)
+0.23 (0.03; 1.67)
 </td>
 <td style="text-align:left;">
-0.2 (0.17; 0.24)
+0.16 (0.02; 1.14)
 </td>
 <td style="text-align:left;">
-0.12 (0.1; 0.14)
+0.26 (0.12; 0.57)
 </td>
 <td style="text-align:left;">
-0.1 (0.09; 0.11)
+0.06 (0.03; 0.11)
 </td>
 <td style="text-align:left;">
-0.13 (0.12; 0.14)
+0.15 (0.12; 0.2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Idade
+</td>
+<td style="text-align:left;">
+1.05 (1.05; 1.05)
+</td>
+<td style="text-align:left;">
+1.09 (1.07; 1.12)
+</td>
+<td style="text-align:left;">
+1.05 (1.04; 1.07)
+</td>
+<td style="text-align:left;">
+1.05 (1.04; 1.06)
+</td>
+<td style="text-align:left;">
+1.03 (1.02; 1.03)
+</td>
+<td style="text-align:left;">
+1.15 (1.14; 1.17)
+</td>
+<td style="text-align:left;">
+1.03 (1.02; 1.03)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Porcentagem da população positiva no momento da vacina
+</td>
+<td style="text-align:left;">
+939.19 (592.51; 1488.7)
+</td>
+<td style="text-align:left;">
+1431.73 (76.85; 26672.27)
+</td>
+<td style="text-align:left;">
+479.78 (91.18; 2524.68)
+</td>
+<td style="text-align:left;">
+1674.87 (559.34; 5015.19)
+</td>
+<td style="text-align:left;">
+2111.33 (957.21; 4657)
+</td>
+<td style="text-align:left;">
+127.89 (42.72; 382.92)
+</td>
+<td style="text-align:left;">
+669.57 (224.51; 1996.87)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sexo
+</td>
+<td style="text-align:left;">
+1.49 (1.45; 1.52)
+</td>
+<td style="text-align:left;">
+0.98 (0.84; 1.14)
+</td>
+<td style="text-align:left;">
+1.62 (1.5; 1.76)
+</td>
+<td style="text-align:left;">
+1.67 (1.57; 1.77)
+</td>
+<td style="text-align:left;">
+1.57 (1.5; 1.65)
+</td>
+<td style="text-align:left;">
+1.32 (1.25; 1.39)
+</td>
+<td style="text-align:left;">
+1.46 (1.37; 1.54)
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Valor de referência é não ter tomado nenhuma dose da vacina.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>†</sup> Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina.
+</td>
+</tr>
+</tfoot>
+</table>
+<p>
+ 
+</p>
+<p><strong>Coronavac com reforço de Pfizer</strong></p>
+<p>
+ 
+</p>
+<table class=" lightable-paper" style='font-size: 12px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-13">Table 12: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de Coronavac + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Status vacinal
+</th>
+<th style="text-align:left;">
+All ages
+</th>
+<th style="text-align:left;">
+18 - 30 years-old
+</th>
+<th style="text-align:left;">
+30 - 40 years-old
+</th>
+<th style="text-align:left;">
+40 - 50 years-old
+</th>
+<th style="text-align:left;">
+50 - 60 years-old
+</th>
+<th style="text-align:left;">
+60 - 70 years-old
+</th>
+<th style="text-align:left;">
+older than 70 years-old
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1ª dose
+</td>
+<td style="text-align:left;">
+1.09 (1.07; 1.11)
+</td>
+<td style="text-align:left;">
+1.08 (1.03; 1.13)
+</td>
+<td style="text-align:left;">
+1.07 (1.02; 1.13)
+</td>
+<td style="text-align:left;">
+0.89 (0.84; 0.96)
+</td>
+<td style="text-align:left;">
+0.97 (0.88; 1.06)
+</td>
+<td style="text-align:left;">
+1.49 (1.42; 1.56)
+</td>
+<td style="text-align:left;">
+1.39 (1.33; 1.47)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+0.75 (0.74; 0.76)
+</td>
+<td style="text-align:left;">
+0.65 (0.63; 0.68)
+</td>
+<td style="text-align:left;">
+0.77 (0.74; 0.8)
+</td>
+<td style="text-align:left;">
+0.76 (0.72; 0.79)
+</td>
+<td style="text-align:left;">
+0.71 (0.67; 0.75)
+</td>
+<td style="text-align:left;">
+1.1 (1.06; 1.14)
+</td>
+<td style="text-align:left;">
+1.09 (1.04; 1.13)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose
+</td>
+<td style="text-align:left;">
+0.73 (0.71; 0.75)
+</td>
+<td style="text-align:left;">
+0.66 (0.62; 0.71)
+</td>
+<td style="text-align:left;">
+0.75 (0.7; 0.8)
+</td>
+<td style="text-align:left;">
+0.79 (0.73; 0.85)
+</td>
+<td style="text-align:left;">
+0.68 (0.61; 0.76)
+</td>
+<td style="text-align:left;">
+0.9 (0.85; 0.95)
+</td>
+<td style="text-align:left;">
+0.89 (0.84; 0.95)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+0.75 (0.74; 0.76)
+</td>
+<td style="text-align:left;">
+0.72 (0.71; 0.74)
+</td>
+<td style="text-align:left;">
+0.71 (0.7; 0.73)
+</td>
+<td style="text-align:left;">
+0.71 (0.69; 0.73)
+</td>
+<td style="text-align:left;">
+0.76 (0.74; 0.79)
+</td>
+<td style="text-align:left;">
+0.99 (0.96; 1.01)
+</td>
+<td style="text-align:left;">
+1.06 (1.03; 1.1)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3ª dose
+</td>
+<td style="text-align:left;">
+0.27 (0.26; 0.29)
+</td>
+<td style="text-align:left;">
+0.7 (0.57; 0.85)
+</td>
+<td style="text-align:left;">
+0.31 (0.25; 0.37)
+</td>
+<td style="text-align:left;">
+0.35 (0.29; 0.42)
+</td>
+<td style="text-align:left;">
+0.29 (0.23; 0.36)
+</td>
+<td style="text-align:left;">
+0.26 (0.23; 0.28)
+</td>
+<td style="text-align:left;">
+0.32 (0.3; 0.34)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Idade
+</td>
+<td style="text-align:left;">
+0.99 (0.99; 0.99)
+</td>
+<td style="text-align:left;">
+1.03 (1.03; 1.03)
+</td>
+<td style="text-align:left;">
+1.01 (1.01; 1.01)
+</td>
+<td style="text-align:left;">
+0.98 (0.98; 0.99)
+</td>
+<td style="text-align:left;">
+0.98 (0.97; 0.98)
+</td>
+<td style="text-align:left;">
+0.98 (0.98; 0.98)
+</td>
+<td style="text-align:left;">
+0.99 (0.99; 1)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Porcentagem da população positiva no momento da vacina
+</td>
+<td style="text-align:left;">
+1.12 (1.12; 1.13)
+</td>
+<td style="text-align:left;">
+1.16 (1.16; 1.17)
+</td>
+<td style="text-align:left;">
+1.15 (1.14; 1.15)
+</td>
+<td style="text-align:left;">
+1.13 (1.13; 1.13)
+</td>
+<td style="text-align:left;">
+1.13 (1.13; 1.14)
+</td>
+<td style="text-align:left;">
+1.1 (1.09; 1.1)
+</td>
+<td style="text-align:left;">
+1.1 (1.1; 1.11)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Sexo
+</td>
+<td style="text-align:left;">
+0.87 (0.86; 0.87)
+</td>
+<td style="text-align:left;">
+0.8 (0.79; 0.81)
+</td>
+<td style="text-align:left;">
+0.79 (0.78; 0.81)
+</td>
+<td style="text-align:left;">
+0.76 (0.74; 0.78)
+</td>
+<td style="text-align:left;">
+0.79 (0.76; 0.82)
+</td>
+<td style="text-align:left;">
+0.92 (0.9; 0.94)
+</td>
+<td style="text-align:left;">
+1.17 (1.14; 1.19)
 </td>
 </tr>
 </tbody>
 </table>
+<p>
+ 
+</p>
+<table class=" lightable-paper" style='font-size: 12px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
+<caption style="font-size: initial !important;">
+<span id="tab:unnamed-chunk-14">Table 13: </span>frailty Models - Modelos de hazard proporcionais entre indivíduos totalmente vacinados (14 dias após a segunda dose de Coronavac) versus não vacinados (nenhuma dose) utilizando clusterização com Frailty para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Modelos
+</th>
+<th style="text-align:left;">
+Hazard Ratio (IC 95%)
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Full - tudo (sem frailty)
+</td>
+<td style="text-align:left;">
+0.75 (0.74; 0.76)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 5 (sem frailty)
+</td>
+<td style="text-align:left;">
+0.76 (0.75; 0.76)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 5
+</td>
+<td style="text-align:left;">
+1.09 (0.98; 1.21)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 4
+</td>
+<td style="text-align:left;">
+0.95 (0.85; 1.06)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 3
+</td>
+<td style="text-align:left;">
+0.87 (0.78; 0.97)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 2
+</td>
+<td style="text-align:left;">
+1.07 (0.96; 1.2)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Full - sample 1
+</td>
+<td style="text-align:left;">
+1.04 (0.93; 1.16)
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Modelos frailty agregando dados agrupados por ID de indivíduos.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>†</sup> Valor de referência é não ter tomado nenhuma dose da vacina.
+</td>
+</tr>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>‡</sup> Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina.
+</td>
+</tr>
+</tfoot>
+</table>
+<p>
+ 
+</p>
+<p>
+ 
+</p>
 <hr />
 
 </div>
@@ -707,7 +1430,7 @@ older than 70 years-old
         </div>
       </div>
 <a href="efetividade-vacinal-variante-delta.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sharing-your-book.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rascunho-artigo-delta.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
