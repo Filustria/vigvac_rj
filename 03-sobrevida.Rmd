@@ -11,7 +11,8 @@ Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos 
 2. **Reference** - do dia da primeira dose até 13 dias após;
 3. **Parcialmente vacinado** - de 14 dias após a primeira dose da vacina até o dia da segunda dose da vacina;
 4. **Almost** - do dia da segunda dose até 13 dias após a segunda dose da vacina;
-5. **Totalmente vacinado** - 14 dias após a segunda dose da vacina até data final da coorte (2021-11-27).
+5. **Totalmente vacinado** - 14 dias após a segunda dose da vacina;
+5. **Totalmente vacinado** - do dia da terceira dose da vacina até data final da coorte (2021-11-27).
 
 <p>&nbsp;</p>
 
