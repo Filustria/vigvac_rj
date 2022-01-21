@@ -11,6 +11,111 @@
 ![Azulejaria Verde em Carne Viva (2000), Adriana Varejão](C:\\Users\\Adelson\\Desktop\\bd vacinas\\relatorios\\vigvac\\docs\\013302031809.jpg)
 
 
+
+## Formas de categorizar o Status Vacinal:  {-}
+
+<p>&nbsp;</p>
+
+***Quatro categorias (padrão atual)***
+
+1. **Não imunizado (referência)** - do dia da primeira dose até 13 dias após;
+2. **Parcialmente vacinado (1 dose)** - de 14 dias após a primeira dose da vacina até o dia da segunda dose da vacina;
+3. **Quase** - do dia da segunda dose até 13 dias após a segunda dose da vacina;
+4. **Totalmente vacinado (2 doses)** - 14 dias após a segunda dose da vacina até data final da coorte (2021-11-27) ou aplicação da terceira dose.
+
+<p>&nbsp;</p>
+
+***Seis categorias (o que estou usando nas minhas análises)***
+
+1. **Pré vacinado** - de 19 de janeiro até o dia da primeira dose da vacina; 
+2. **Primeira dose** - do dia da primeira dose até 13 dias após;
+3. **Parcialmente vacinado** - de 14 dias após a primeira dose da vacina até o dia da segunda dose da vacina;
+4. **Quase** - do dia da segunda dose até 13 dias após a segunda dose da vacina;
+5. **Totalmente vacinado** - 14 dias após a segunda dose da vacina;
+6. **Terceira dose** - do dia da terceira dose da vacina até data final da coorte (2021-11-27).
+
+<p>&nbsp;</p>
+
+***Quatro categorias (outra ideia interessante e mais sucinta)***
+
+1. **Pré vacinado** - de 19 de janeiro até 13 dias após a primeira dose; 
+2. **Primeira dose** - de 14 dias após a primeira dose até 13 dias após a segunda dose;
+3. **Segunda dose** - de 14 dias após a segunda dose da vacina até a data da terceira dose (reforço);
+4. **Terceira dose** - do dia da terceira dose da vacina até data final da coorte (2021-11-27).
+
+----
+
+## Resultados para o desfecho PCR positivo para Sars-Cov-2:  {-}
+
+
+<p>&nbsp;</p>
+
+***Seis categorias (o que estou usando nas minhas análises)***
+
+
+**AstraZeneca**
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_1.RData")
+
+
+vacinas_astra_1 %>% 
+  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021.", 
+      col.names = c("Status vacinal", "Hazard Ratio (95% CI)")) %>%
+  kable_styling(bootstrap_options = "striped", full_width = F, position = "right", font_size = 14) %>%
+  add_footnote(c("Porcentagem: Porcentagem da população positiva no momento da vacina", "Valor de referência é não ter tomado nenhuma dose da vacina.", "Todos os modelos de Hazard proporcionais foram ajustados por sexo, idade do indivíduo e pela porcentagem da população positiva para COVID-19 no momento da aplicação da vacina."), notation = "symbol")
+```
+
+<p>&nbsp;</p>
+
+**Coronavac**
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_coronavac_1.RData")
+
+vacinas_coronavac_1 %>% 
+  kbl(format = "html", caption = "Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de Coronavac + dose de reforço por imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.", 
+      col.names = c("Status vacinal", "Hazard Ratio (95% CI)")) %>% 
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "right", font_size = 14)
+
+```
+
+<p>&nbsp;</p>
+
+***Quatro categorias (padrão atual)***
+
+**AstraZeneca**
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_2.RData")
+
+vacinas_astra_2 %>% 
+  kbl(format = "html", caption = "Modelo partindo dos 13 primeiros dias pós primeira dose como referência. Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.", 
+      col.names = c("Status vacinal", "Hazard Ratio (95% CI)")) %>% 
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "right", font_size = 14)
+```
+
+<p>&nbsp;</p>
+
+**Coronavac**
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_coronavac_2.RData")
+
+vacinas_coronavac_2 %>% 
+  kbl(format = "html", caption = "Modelo partindo dos 13 primeiros dias pós primeira dose como referência. Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de Coronavac + dose de reforço por imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.", 
+      col.names = c("Status vacinal", "Hazard Ratio (95% CI)")) %>% 
+  kable_styling(bootstrap_options = "striped", full_width = T, position = "right", font_size = 14)
+
+```
+
+----
+
+
 Este relatório apresenta as análises realizadas no âmbito do estudo VIGVAC dentro do estado do Rio de Janeiro no ano de 2021.  
 
 Todas as análises compreende o período que inicia com a data de inauguração do calendário vacinal, em 19 de janeiro de 2021 e terminam no último dia da coorte de seguimento da população - 2021-11-27. O banco de dados compreende informações do banco de vacinações, do banco de notificação de casos de gripe e dos casos de SRAG. O número total de cada banco e suas sobreposições estão distribuidas conforme tabela abaixo.

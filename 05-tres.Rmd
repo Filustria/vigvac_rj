@@ -15,9 +15,10 @@ library(kableExtra)
 
 load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\eventopessoatempoAZ.RData")
 
-evento.pessoa.tempo %>%
-  kbl(caption = "Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de AstraZeneca nas duas primeiras doses e qualquer outro imunizante como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021") %>%
-  kable_styling(bootstrap_options = "striped", full_width = T, position = "right")
+
+evento.pessoa.tempoAZ %>%
+  kbl(caption = "Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de Astrazeneca nas duas primeiras doses e Pfizer como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021") %>%
+  kable_paper("hover", full_width = F)
 
 
 ```
@@ -46,20 +47,20 @@ vacinas_astra_1 %>%
 
 ```{r, warning=F, echo=F, message=F}
 
-a <- merge(evento.pessoa.tempo, vacinas_astra_1, by = "Status vacinal", all.x = T)
+a <- merge(evento.pessoa.tempoAZ, vacinas_astra_1, by = "Status vacinal", all.x = T)
 
 a <- a %>%
   mutate(seq = c(2,3,4,5,6,1)) %>%
   arrange(seq) %>%
-  select(-seq, -preprint)
+  select(-seq)
 
 a$`Hazard Ratio (95% CI)`[is.na(a$`Hazard Ratio (95% CI)`)] <- 1
 
 
 a %>% 
   kbl(format = "html", caption = "Risco absoluto e Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.", 
-      col.names = c("Status vacinal", "Pessoa-dia", "número de eventos", "incidência", "Hazard Ratio (95% CI)")) %>%
-  kable_styling(bootstrap_options = "striped", full_width = T, position = "right")
+      col.names = c("Status vacinal", "Pessoa-dia", "número de eventos", "incidência", "Hazard Ratio (95% CI)"))%>%
+  kable_paper("hover", full_width = F)
 
 
 ```
@@ -133,6 +134,20 @@ vacinas_internacao %>%
 <p>&nbsp;</p>
 
 **Coronavac com reforço de Pfizer**
+
+<p>&nbsp;</p>
+
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\eventopessoatempocoronavac.RData")
+
+evento.pessoa.tempo_coronavac %>%
+  kbl(caption = "Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de Coronavac nas duas primeiras doses e Pfizer como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021") %>%
+  kable_paper("hover", full_width = F)
+
+```
+
 
 <p>&nbsp;</p>
 

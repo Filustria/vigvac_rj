@@ -3,6 +3,7 @@
 
 
 
+
 Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos de *Hazard proporcionais*. Foram analisadas aqui os imunizantes Pfizer, AstraZeneca, Coronavac e Jansen. As comparações foram feitas sempre tomando como referência o período que os indivíduos não haviam tomado nenhuma dose da vacina, contando a partir do dia 19 de janeiro, data da inauguração da campanha de vacinação. Desta forma, foram computados os seguintes **STATUS VACINAIS**
 
 <p>&nbsp;</p>
@@ -22,21 +23,6 @@ Todos os modelos de hazard proporcionais tiveram o tempo modelado como variávei
 
 <p>&nbsp;</p>
 
-**Incidência de infecção por Sars-Cov-2 dentre aqueles que receberam ao menos duas doses de AstraZeneca**
-
-```{r, warning=F, echo=F, message=F}
-
-library(tidyverse)
-library(kableExtra)
-
-load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\evento.pessoa.tempo.RData")
-
-evento.pessoa.tempo %>%
-  kbl(caption = "Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de AstraZeneca nas duas primeiras doses. Estado do Rio de Janeiro, 2021") %>%
-  kable_paper("hover", full_width = F)
-
-
-```
 
 
 
