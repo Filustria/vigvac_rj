@@ -33,6 +33,9 @@ Todos os modelos de hazard proporcionais tiveram o tempo modelado como variávei
 
 ```{r, warning=F, echo=F, message=F}
 
+library(tidyverse)
+library(kableExtra)
+
 load("C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_todas_gripe.RData")
 
 vacinas_todas_gripe %>% 

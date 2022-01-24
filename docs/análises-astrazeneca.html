@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Análises de Sobrevida | VIGVAC - Rio de Janeiro</title>
+  <title>Análises AstraZeneca | VIGVAC - Rio de Janeiro</title>
   <meta name="description" content="Análises de efetividade vacinal contra Sars-Cov-2 no estado do Rio de Janeiro." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Análises de Sobrevida | VIGVAC - Rio de Janeiro" />
+  <meta property="og:title" content="Análises AstraZeneca | VIGVAC - Rio de Janeiro" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://filustria.github.io/vigvac_rj/" />
   <meta property="og:image" content="https://filustria.github.io/vigvac_rj/C:\Users\Adelson\Desktop\bd vacinas\relatorios\vigvac\docs\par42150-overlay.jpg" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Análises de Sobrevida | VIGVAC - Rio de Janeiro" />
+  <meta name="twitter:title" content="Análises AstraZeneca | VIGVAC - Rio de Janeiro" />
   
   <meta name="twitter:description" content="Análises de efetividade vacinal contra Sars-Cov-2 no estado do Rio de Janeiro." />
   <meta name="twitter:image" content="https://filustria.github.io/vigvac_rj/C:\Users\Adelson\Desktop\bd vacinas\relatorios\vigvac\docs\par42150-overlay.jpg" />
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="apresentação.html"/>
-<link rel="next" href="efetividade-vacinal-variante-delta.html"/>
+<link rel="prev" href="rascunho-artigo-3-doses.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -173,110 +173,98 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="análises-de-sobrevida" class="section level1 unnumbered">
-<h1>Análises de Sobrevida</h1>
-<p>Aqui estão resumidas as análises de efetividade vacinal feitas usando modelos de <em>Hazard proporcionais</em>. Foram analisadas aqui os imunizantes Pfizer, AstraZeneca, Coronavac e Jansen. As comparações foram feitas sempre tomando como referência o período que os indivíduos não haviam tomado nenhuma dose da vacina, contando a partir do dia 19 de janeiro, data da inauguração da campanha de vacinação. Desta forma, foram computados os seguintes <strong>STATUS VACINAIS</strong></p>
+<div id="análises-astrazeneca" class="section level1 unnumbered">
+<h1>Análises AstraZeneca</h1>
 <p>
  
 </p>
-<ol style="list-style-type: decimal">
-<li><strong>Pré vacinado</strong> - de 19 de janeiro até o dia da primeira dose da vacina;</li>
-<li><strong>Reference</strong> - do dia da primeira dose até 13 dias após;</li>
-<li><strong>Parcialmente vacinado</strong> - de 14 dias após a primeira dose da vacina até o dia da segunda dose da vacina;</li>
-<li><strong>Almost</strong> - do dia da segunda dose até 13 dias após a segunda dose da vacina;</li>
-<li><strong>Totalmente vacinado</strong> - 14 dias após a segunda dose da vacina;</li>
-<li><strong>Terceira dose</strong> - do dia da terceira dose da vacina até data final da coorte (2021-11-27).</li>
-</ol>
+<p>Análises de sobrevida para os desfechos Síndrome Gripal por Sars-Cov-2, Internação hospitalar por Sars-Cov-2, Admissão em UTI por Sars-Cov-2 e morte por Sars-Cov-2.</p>
 <p>
  
 </p>
-<p>vacinados com Jansen receberam apenas uma dose da vacina, portanto contam apenas dois períodos - não-vacinado versus totalmente vacinado.</p>
-<p>Todos os modelos de hazard proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, permitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações do indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, número de casos de COVID19 na semana vacinal)</p>
 <p>
  
 </p>
-<p><strong>Resultados das análises para risco de contrair infecção por Sars-Cov-2</strong></p>
-<p>
- 
-</p>
+<div id="síndrome-gripal" class="section level2 unnumbered">
+<h2>Síndrome Gripal</h2>
 <table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
 <caption>
-<span id="tab:unnamed-chunk-9">Table 8: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados exclusivamente com AstraZeneca, Coronavac, Pfizer e Jansen entre Janeiro a Novembro de 2021.
+<span id="tab:unnamed-chunk-19">Table 18: </span>Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para Síndrome gripal em UTI por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
 </caption>
 <thead>
 <tr>
 <th style="text-align:left;">
-Número de doses
+Modelos
 </th>
 <th style="text-align:left;">
-AstraZeneca
+Pré-Vacinado
 </th>
 <th style="text-align:left;">
-Coronavac
-</th>
-<th style="text-align:left;">
-Pfizer
-</th>
-<th style="text-align:left;">
-Jansen
+1ª dose + 13 dias
 </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left;">
-Apenas uma dose
+1ª dose
 </td>
 <td style="text-align:left;">
-0.699 (0.696; 0.702)
-</td>
-<td style="text-align:left;">
-1.08 (1.07; 1.092)
-</td>
-<td style="text-align:left;">
-0.512 (0.508; 0.515)
-</td>
-<td style="text-align:left;">
-0.378 (0.373; 0.384)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Duas doses
-</td>
-<td style="text-align:left;">
-0.354 (0.352; 0.356)
-</td>
-<td style="text-align:left;">
-0.59 (0.587; 0.594)
-</td>
-<td style="text-align:left;">
-0.24 (0.236; 0.243)
+1.12 (1.1; 1.15)
 </td>
 <td style="text-align:left;">
 NA
 </td>
 </tr>
+<tr>
+<td style="text-align:left;">
+1ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+0.68 (0.67; 0.68)
+</td>
+<td style="text-align:left;">
+0.94 (0.92; 0.96)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose
+</td>
+<td style="text-align:left;">
+0.81 (0.79; 0.83)
+</td>
+<td style="text-align:left;">
+0.72 (0.7; 0.74)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+0.41 (0.4; 0.41)
+</td>
+<td style="text-align:left;">
+0.7 (0.68; 0.72)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3ª dose
+</td>
+<td style="text-align:left;">
+0.18 (0.16; 0.2)
+</td>
+<td style="text-align:left;">
+0.18 (0.15; 0.2)
+</td>
+</tr>
 </tbody>
 <tfoot>
 <tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<span style="font-style: italic;">Note: </span>
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<sup></sup> Valor de referência é não ter tomado nenhuma dose da vacina.
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<sup>1</sup> vacinados com Jansen receberam apenas uma dose da vacina
-</td>
-</tr>
-<tr>
-<td style="padding: 0; border: 0;" colspan="100%">
-<sup>a</sup> Todos os modelos de hazar proporcionais tiveram o tempo modelado como variáveis categóricas para acada semana do calendário vacinal, <br>permitindo melhor ajuste para efeitos não lineares ao longo do tempo. Além disso, todos os modelos foram também ajustados por informações <br>do indivíduo (idade e sexo) e informações do contexto do município de moradia (tamanho da população, proporção da população vacinada, <br>número de casos de COVID19 na semana vacinal)
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Modelo de Cox ajustado por sexo e idade.
 </td>
 </tr>
 </tfoot>
@@ -284,29 +272,288 @@ NA
 <p>
  
 </p>
-<strong>Resultados das análises para risco de ser hospitalizado por Sars-Cov-2</strong>
+</div>
+<div id="internação-hospitalar" class="section level2 unnumbered">
+<h2>Internação hospitalar</h2>
+<table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
+<caption>
+<span id="tab:unnamed-chunk-20">Table 19: </span>Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para Internação hospitalar por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Modelos
+</th>
+<th style="text-align:left;">
+Pré-Vacinado
+</th>
+<th style="text-align:left;">
+1ª dose + 13 dias
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1ª dose
+</td>
+<td style="text-align:left;">
+3.78 (3.43; 4.17)
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+0.57 (0.55; 0.6)
+</td>
+<td style="text-align:left;">
+0.55 (0.51; 0.59)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose
+</td>
+<td style="text-align:left;">
+0.77 (0.67; 0.89)
+</td>
+<td style="text-align:left;">
+0.2 (0.18; 0.23)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+0.22 (0.21; 0.24)
+</td>
+<td style="text-align:left;">
+0.14 (0.12; 0.16)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3ª dose
+</td>
+<td style="text-align:left;">
+0.07 (0.05; 0.1)
+</td>
+<td style="text-align:left;">
+0.04 (0.03; 0.07)
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Modelo de Cox ajustado por sexo e idade.
+</td>
+</tr>
+</tfoot>
+</table>
 <p>
  
 </p>
-<p>tabela<br />
-tabela<br />
-tabela</p>
+</div>
+<div id="admissão-em-uti" class="section level2 unnumbered">
+<h2>Admissão em UTI</h2>
+<table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
+<caption>
+<span id="tab:unnamed-chunk-21">Table 20: </span>Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para internação em UTI por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Modelos
+</th>
+<th style="text-align:left;">
+Pré-Vacinado
+</th>
+<th style="text-align:left;">
+1ª dose + 13 dias
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1ª dose
+</td>
+<td style="text-align:left;">
+4.18 (3.63; 4.82)
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+0.83 (0.79; 0.88)
+</td>
+<td style="text-align:left;">
+0.59 (0.53; 0.65)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose
+</td>
+<td style="text-align:left;">
+1.01 (0.84; 1.22)
+</td>
+<td style="text-align:left;">
+0.24 (0.21; 0.28)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+0.4 (0.37; 0.43)
+</td>
+<td style="text-align:left;">
+0.19 (0.16; 0.22)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3ª dose
+</td>
+<td style="text-align:left;">
+0.3 (0.22; 0.41)
+</td>
+<td style="text-align:left;">
+0.14 (0.09; 0.21)
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Modelo de Cox ajustado por sexo e idade.
+</td>
+</tr>
+</tfoot>
+</table>
 <p>
  
 </p>
-<strong>Resultados das análises para risco de morrer por Sars-Cov-2</strong>
+</div>
+<div id="morte-por-sars-cov-2" class="section level2 unnumbered">
+<h2>Morte por Sars-Cov-2</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="análises-astrazeneca.html#cb1-1"></a><span class="kw">load</span>(<span class="dt">file =</span> <span class="st">&quot;C:</span><span class="ch">\\</span><span class="st">Users</span><span class="ch">\\</span><span class="st">Adelson</span><span class="ch">\\</span><span class="st">Desktop</span><span class="ch">\\</span><span class="st">bd vacinas</span><span class="ch">\\</span><span class="st">novo</span><span class="ch">\\</span><span class="st">AZ_morte_total.RData&quot;</span>)</span>
+<span id="cb1-2"><a href="análises-astrazeneca.html#cb1-2"></a></span>
+<span id="cb1-3"><a href="análises-astrazeneca.html#cb1-3"></a>AZ_morte_total <span class="op">%&gt;%</span><span class="st"> </span></span>
+<span id="cb1-4"><a href="análises-astrazeneca.html#cb1-4"></a><span class="st">  </span><span class="kw">kbl</span>(<span class="dt">format =</span> <span class="st">&quot;html&quot;</span>, <span class="dt">caption =</span> <span class="st">&quot;Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para Morte por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.&quot;</span>, </span>
+<span id="cb1-5"><a href="análises-astrazeneca.html#cb1-5"></a>      <span class="dt">col.names =</span> <span class="kw">c</span>(<span class="st">&quot;Modelos&quot;</span>, <span class="st">&quot;Pré-Vacinado&quot;</span>, <span class="st">&quot;1ª dose + 13 dias&quot;</span>)) <span class="op">%&gt;%</span></span>
+<span id="cb1-6"><a href="análises-astrazeneca.html#cb1-6"></a><span class="st">  </span><span class="kw">kable_paper</span>(<span class="st">&quot;hover&quot;</span>, <span class="dt">full_width =</span> F) <span class="op">%&gt;%</span></span>
+<span id="cb1-7"><a href="análises-astrazeneca.html#cb1-7"></a><span class="st">  </span><span class="kw">add_footnote</span>(<span class="kw">c</span>(<span class="st">&quot;Modelo de Cox ajustado por sexo e idade.&quot;</span>), <span class="dt">notation =</span> <span class="st">&quot;symbol&quot;</span>)</span></code></pre></div>
+<table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
+<caption>
+<span id="tab:unnamed-chunk-22">Table 21: </span>Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para Morte por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Modelos
+</th>
+<th style="text-align:left;">
+Pré-Vacinado
+</th>
+<th style="text-align:left;">
+1ª dose + 13 dias
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+1ª dose
+</td>
+<td style="text-align:left;">
+25.09 (17.08; 36.85)
+</td>
+<td style="text-align:left;">
+NA
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+1ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+8.02 (7.05; 9.14)
+</td>
+<td style="text-align:left;">
+0.61 (0.54; 0.69)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose
+</td>
+<td style="text-align:left;">
+6.17 (4.09; 9.31)
+</td>
+<td style="text-align:left;">
+0.25 (0.21; 0.3)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+2ª dose + 14 dias
+</td>
+<td style="text-align:left;">
+2.63 (2.28; 3.03)
+</td>
+<td style="text-align:left;">
+0.18 (0.14; 0.22)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+3ª dose
+</td>
+<td style="text-align:left;">
+0.72 (0.42; 1.24)
+</td>
+<td style="text-align:left;">
+0.09 (0.05; 0.16)
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td style="padding: 0; border:0;" colspan="100%">
+<sup>*</sup> Modelo de Cox ajustado por sexo e idade.
+</td>
+</tr>
+</tfoot>
+</table>
 <p>
  
 </p>
+<hr />
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="apresentação.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="efetividade-vacinal-variante-delta.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="rascunho-artigo-3-doses.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -337,7 +584,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/03-sobrevida.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/08-analises_AZ.Rmd",
 "text": "Edit"
 },
 "history": {

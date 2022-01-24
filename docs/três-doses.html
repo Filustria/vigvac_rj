@@ -55,6 +55,70 @@
 <link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
+<style type="text/css">
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
 
 
 <link rel="stylesheet" href="style.css" type="text/css" />
@@ -83,6 +147,12 @@
 <li class="chapter" data-level="" data-path="três-doses.html"><a href="três-doses.html"><i class="fa fa-check"></i>Três doses</a></li>
 <li class="chapter" data-level="" data-path="rascunho-artigo-delta.html"><a href="rascunho-artigo-delta.html"><i class="fa fa-check"></i>Rascunho artigo Delta</a></li>
 <li class="chapter" data-level="" data-path="rascunho-artigo-3-doses.html"><a href="rascunho-artigo-3-doses.html"><i class="fa fa-check"></i>Rascunho artigo 3 doses</a></li>
+<li class="chapter" data-level="" data-path="análises-astrazeneca.html"><a href="análises-astrazeneca.html"><i class="fa fa-check"></i>Análises AstraZeneca</a><ul>
+<li class="chapter" data-level="" data-path="análises-astrazeneca.html"><a href="análises-astrazeneca.html#síndrome-gripal"><i class="fa fa-check"></i>Síndrome Gripal</a></li>
+<li class="chapter" data-level="" data-path="análises-astrazeneca.html"><a href="análises-astrazeneca.html#internação-hospitalar"><i class="fa fa-check"></i>Internação hospitalar</a></li>
+<li class="chapter" data-level="" data-path="análises-astrazeneca.html"><a href="análises-astrazeneca.html#admissão-em-uti"><i class="fa fa-check"></i>Admissão em UTI</a></li>
+<li class="chapter" data-level="" data-path="análises-astrazeneca.html"><a href="análises-astrazeneca.html#morte-por-sars-cov-2"><i class="fa fa-check"></i>Morte por Sars-Cov-2</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 
@@ -112,7 +182,7 @@
 <p><strong>Incidência de infecção por Sars-Cov-2 dentre aqueles que receberam ao menos duas doses de AstraZeneca MAIS reforço com qualquer imunizante</strong></p>
 <table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
 <caption>
-<span id="tab:unnamed-chunk-11">Table 9: </span>Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de Astrazeneca nas duas primeiras doses e Pfizer como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021
+<span id="tab:unnamed-chunk-10">Table 9: </span>Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de Astrazeneca nas duas primeiras doses e Pfizer como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021
 </caption>
 <thead>
 <tr>
@@ -136,13 +206,13 @@ incidência
 Pré-vacinado
 </td>
 <td style="text-align:right;">
-574576526
+589997620
 </td>
 <td style="text-align:right;">
-207128
+273
 </td>
 <td style="text-align:right;">
-0.3604881
+0.0004627
 </td>
 </tr>
 <tr>
@@ -150,13 +220,13 @@ Pré-vacinado
 1ª dose
 </td>
 <td style="text-align:right;">
-56470780
+59262396
 </td>
 <td style="text-align:right;">
-17285
+682
 </td>
 <td style="text-align:right;">
-0.3060875
+0.0115081
 </td>
 </tr>
 <tr>
@@ -164,13 +234,13 @@ Pré-vacinado
 1ª dose + 14 dias
 </td>
 <td style="text-align:right;">
-357129688
+379827200
 </td>
 <td style="text-align:right;">
-87160
+1937
 </td>
 <td style="text-align:right;">
-0.2440570
+0.0050997
 </td>
 </tr>
 <tr>
@@ -178,13 +248,13 @@ Pré-vacinado
 2ª dose
 </td>
 <td style="text-align:right;">
-44888647
+48180391
 </td>
 <td style="text-align:right;">
-9690
+142
 </td>
 <td style="text-align:right;">
-0.2158675
+0.0029473
 </td>
 </tr>
 <tr>
@@ -192,13 +262,13 @@ Pré-vacinado
 2ª dose + 14 dias
 </td>
 <td style="text-align:right;">
-297576624
+320577667
 </td>
 <td style="text-align:right;">
-40311
+871
 </td>
 <td style="text-align:right;">
-0.1354643
+0.0027170
 </td>
 </tr>
 <tr>
@@ -206,13 +276,13 @@ Pré-vacinado
 3ª dose
 </td>
 <td style="text-align:right;">
-12988847
+13804149
 </td>
 <td style="text-align:right;">
-482
+16
 </td>
 <td style="text-align:right;">
-0.0371088
+0.0011591
 </td>
 </tr>
 </tbody>
@@ -226,7 +296,7 @@ Pré-vacinado
 </p>
 <table class="table table-striped" style="font-size: 14px; width: auto !important; margin-right: 0; margin-left: auto">
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-12">Table 10: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021.
+<span id="tab:unnamed-chunk-11">Table 10: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021.
 </caption>
 <thead>
 <tr>
@@ -304,7 +374,7 @@ Hazard Ratio (95% CI)
 <p><strong>Tabela agregando informações de risco absoluto e Hazard Ratios (ainda usando Cox)</strong></p>
 <table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
 <caption>
-<span id="tab:unnamed-chunk-13">Table 11: </span>Risco absoluto e Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.
+<span id="tab:unnamed-chunk-12">Table 11: </span>Risco absoluto e Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por qualquer imunizante entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina.
 </caption>
 <thead>
 <tr>
@@ -331,13 +401,13 @@ Hazard Ratio (95% CI)
 Pré-vacinado
 </td>
 <td style="text-align:right;">
-574576526
+589997620
 </td>
 <td style="text-align:right;">
-207128
+273
 </td>
 <td style="text-align:right;">
-0.3604881
+0.0004627
 </td>
 <td style="text-align:left;">
 1
@@ -348,13 +418,13 @@ Pré-vacinado
 1ª dose
 </td>
 <td style="text-align:right;">
-56470780
+59262396
 </td>
 <td style="text-align:right;">
-17285
+682
 </td>
 <td style="text-align:right;">
-0.3060875
+0.0115081
 </td>
 <td style="text-align:left;">
 1.11 (1.09; 1.14)
@@ -365,13 +435,13 @@ Pré-vacinado
 1ª dose + 14 dias
 </td>
 <td style="text-align:right;">
-357129688
+379827200
 </td>
 <td style="text-align:right;">
-87160
+1937
 </td>
 <td style="text-align:right;">
-0.2440570
+0.0050997
 </td>
 <td style="text-align:left;">
 0.67 (0.66; 0.68)
@@ -382,13 +452,13 @@ Pré-vacinado
 2ª dose
 </td>
 <td style="text-align:right;">
-44888647
+48180391
 </td>
 <td style="text-align:right;">
-9690
+142
 </td>
 <td style="text-align:right;">
-0.2158675
+0.0029473
 </td>
 <td style="text-align:left;">
 0.88 (0.86; 0.9)
@@ -399,13 +469,13 @@ Pré-vacinado
 2ª dose + 14 dias
 </td>
 <td style="text-align:right;">
-297576624
+320577667
 </td>
 <td style="text-align:right;">
-40311
+871
 </td>
 <td style="text-align:right;">
-0.1354643
+0.0027170
 </td>
 <td style="text-align:left;">
 0.42 (0.41; 0.42)
@@ -416,13 +486,13 @@ Pré-vacinado
 3ª dose
 </td>
 <td style="text-align:right;">
-12988847
+13804149
 </td>
 <td style="text-align:right;">
-482
+16
 </td>
 <td style="text-align:right;">
-0.0371088
+0.0011591
 </td>
 <td style="text-align:left;">
 0.23 (0.21; 0.25)
@@ -440,7 +510,7 @@ Pré-vacinado
 </p>
 <table class=" lightable-paper" style='font-size: 11px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-right: 0; margin-left: auto'>
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-14">Table 12: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021.
+<span id="tab:unnamed-chunk-13">Table 12: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021.
 </caption>
 <thead>
 <tr>
@@ -707,7 +777,7 @@ Sexo
 </p>
 <table class=" lightable-paper" style='font-size: 12px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-15">Table 13: </span>Modelos de hazard proporcionais entre indivíduos totalmente vacinados (14 dias após a segunda dose de AstraZeneca) versus não vacinados (nenhuma dose) utilizando clusterização com Frailty para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
+<span id="tab:unnamed-chunk-14">Table 13: </span>Modelos de hazard proporcionais entre indivíduos totalmente vacinados (14 dias após a segunda dose de AstraZeneca) versus não vacinados (nenhuma dose) utilizando clusterização com Frailty para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
 </caption>
 <thead>
 <tr>
@@ -801,7 +871,7 @@ Full - sample 1
 <p><strong>Internações hospitalares</strong></p>
 <table class=" lightable-paper" style='font-size: 12px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-16">Table 14: </span>Hazard Ratio (95% CI) para Internação Hospitalar por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio
+<span id="tab:unnamed-chunk-15">Table 14: </span>Hazard Ratio (95% CI) para Internação Hospitalar por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de AstraZeneca + dose de reforço por imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio
 </caption>
 <thead>
 <tr>
@@ -1063,7 +1133,7 @@ Sexo
 </p>
 <table class=" lightable-paper lightable-hover" style='font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;'>
 <caption>
-<span id="tab:unnamed-chunk-17">Table 15: </span>Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de Coronavac nas duas primeiras doses e Pfizer como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021
+<span id="tab:unnamed-chunk-16">Table 15: </span>Incidência de casos de síndrome gripal notificados de acordo com o Status vacinal dos indivíduos que fizeram uso de Coronavac nas duas primeiras doses e Pfizer como dose de reforço (terceira dose). Estado do Rio de Janeiro, 2021
 </caption>
 <thead>
 <tr>
@@ -1173,7 +1243,7 @@ Pré-vacinado
 </p>
 <table class=" lightable-paper" style='font-size: 12px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-18">Table 16: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de Coronavac + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio
+<span id="tab:unnamed-chunk-17">Table 16: </span>Hazard Ratio (95% CI) para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro, de acordo com o estado vacinal dos indivíduos imunizados com duas doses de Coronavac + dose de reforço com imunizante Pfizer entre Janeiro a Novembro de 2021. Valor de referência é não ter tomado nenhuma dose da vacina. Modelo de Cox ajustado por sexo, idade e tamanho da população no local de domicílio
 </caption>
 <thead>
 <tr>
@@ -1419,7 +1489,7 @@ Sexo
 </p>
 <table class=" lightable-paper" style='font-size: 12px; font-family: "Arial Narrow", arial, helvetica, sans-serif; margin-left: auto; margin-right: auto;'>
 <caption style="font-size: initial !important;">
-<span id="tab:unnamed-chunk-19">Table 17: </span>frailty Models - Modelos de hazard proporcionais entre indivíduos totalmente vacinados (14 dias após a segunda dose de Coronavac) versus não vacinados (nenhuma dose) utilizando clusterização com Frailty para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
+<span id="tab:unnamed-chunk-18">Table 17: </span>frailty Models - Modelos de hazard proporcionais entre indivíduos totalmente vacinados (14 dias após a segunda dose de Coronavac) versus não vacinados (nenhuma dose) utilizando clusterização com Frailty para contrair Síndrome Gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.
 </caption>
 <thead>
 <tr>

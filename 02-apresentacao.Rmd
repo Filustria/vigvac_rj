@@ -57,6 +57,9 @@
 
 ```{r, warning=F, echo=F, message=F}
 
+library(tidyverse)
+library(kableExtra)
+
 load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\vacinas_astra_1.RData")
 
 

@@ -1,0 +1,87 @@
+# Análises AstraZeneca {-}
+
+<p>&nbsp;</p>
+
+Análises de sobrevida para os desfechos Síndrome Gripal por Sars-Cov-2, Internação hospitalar por Sars-Cov-2, Admissão em UTI por Sars-Cov-2 e morte por Sars-Cov-2.
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+## Síndrome Gripal {-}
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\AZ_gripe_total.RData")
+
+AZ_gripe_total %>% 
+  kbl(format = "html", caption = "Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para Síndrome gripal em UTI por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.", 
+      col.names = c("Modelos", "Pré-Vacinado", "1ª dose + 13 dias")) %>%
+  kable_paper("hover", full_width = F) %>%
+  add_footnote(c("Modelo de Cox ajustado por sexo e idade."), notation = "symbol")
+
+
+```
+
+
+<p>&nbsp;</p>
+## Internação hospitalar {-}
+
+```{r, warning=F, echo=F, message=F}
+
+library(tidyverse)
+library(kableExtra)
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\AZ_interna_total.RData")
+
+AZ_interna_total %>% 
+  kbl(format = "html", caption = "Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para Internação hospitalar por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.", 
+      col.names = c("Modelos", "Pré-Vacinado", "1ª dose + 13 dias")) %>%
+  kable_paper("hover", full_width = F) %>%
+  add_footnote(c("Modelo de Cox ajustado por sexo e idade."), notation = "symbol")
+
+```
+
+
+<p>&nbsp;</p>
+
+
+## Admissão em UTI {-}
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\AZ_UTI_total.RData")
+
+AZ_UTI_total %>% 
+  kbl(format = "html", caption = "Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para internação em UTI por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.", 
+      col.names = c("Modelos", "Pré-Vacinado", "1ª dose + 13 dias")) %>%
+  kable_paper("hover", full_width = F) %>%
+  add_footnote(c("Modelo de Cox ajustado por sexo e idade."), notation = "symbol")
+
+
+```
+
+
+<p>&nbsp;</p>
+
+## Morte por Sars-Cov-2 {-}
+
+
+```{r}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\AZ_morte_total.RData")
+
+AZ_morte_total %>% 
+  kbl(format = "html", caption = "Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca ou duas doses da AstraZeneca + reforço com Pfizer versus Indivíduos nos 13 primeiros dias após a primeira dose da vacina para Morte por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.", 
+      col.names = c("Modelos", "Pré-Vacinado", "1ª dose + 13 dias")) %>%
+  kable_paper("hover", full_width = F) %>%
+  add_footnote(c("Modelo de Cox ajustado por sexo e idade."), notation = "symbol")
+
+
+```
+
+
+<p>&nbsp;</p>
+
+----
+
+
