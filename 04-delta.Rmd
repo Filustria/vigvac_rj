@@ -2,3 +2,111 @@
 
 
 Análises comparando a efetividade vacinal no período pré e pós início de circulação da variante DELTA. A data escolhida será o primeiro dia do mês de julho. Esta análise carece de especificidade quanto à variante, mas pode mostrar ao longo do tempo se houve mudança na efetividade das vacinas, à medida em que a variante delta se tornou mais dominante no cenário fluminense. 
+
+
+<p>&nbsp;</p>
+
+Na [página do Butantã](https://agenciabrasil.ebc.com.br/saude/noticia/2021-11/pesquisa-mapeia-entrada-e-disseminacao-da-variante-delta-no-brasil){target="_blank"} pode-se encontrar a versão [pré-print](https://www.medrxiv.org/content/10.1101/2021.09.15.21262846v2.full.pdf){target="_blank"} do estudo feito pela instituição mapeando a entrada da variante Delta no Brasil. Neste estudo a variante Delta teria se tornado dominante no Brasil durante o mês de junho. Para as nossas análises usaremos dois períodos de análise distintos, anterior à junho - considerando como período em que a Gamma era a variante dominante - e posterior à julho, quando a variante Delta seria já a dominante.
+
+
+Para a análise da diferença entre os períodos vamos usar uma metodologia semelhante ao artigo [Covid-19 Vaccine Effectiveness in New York State](https://www.nejm.org/doi/full/10.1056/NEJMoa2116063?query=featured_coronavirus) publicado no NEJM em janeiro de 2022. 
+
+
+
+[Influence of age on the effectiveness and duration of protection in Vaxzevria and CoronaVac vaccines](https://www.medrxiv.org/content/10.1101/2021.08.21.21261501v2.full.pdf){target="_blank"}
+
+<p>&nbsp;</p>
+
+**Test negative case-control**
+
+Artigos sobre test negative case-control studies. [Effectiveness of the Pfizer-BioNTech and Oxford-AstraZeneca vaccines on covid-19 related symptoms, hospital admissions, and mortality in older adults in England: test negative case-control study](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8116636/pdf/bmj.n1088.pdf){target="_blank"}
+
+
+Artigo focando na Coronavac. [Effectiveness of the CoronaVac vaccine in older adults during a gamma variant associated epidemic of covid-19 in Brazil: test negative case-control study](https://www.bmj.com/content/374/bmj.n2015#:~:text=In%20this%20test%20negative%20case,years%20during%20a%20gamma%20variant){target="_blank"}
+
+
+Artigo focando na AstraZeneca - [Effectiveness of the ChAdOx1 vaccine in the elderly during SARS-CoV-2 Gamma variant transmission in Brazil](https://www.medrxiv.org/content/10.1101/2021.07.19.21260802v1.full.pdf){target="_blank"}
+
+<p>&nbsp;</p>
+----
+
+
+<p>&nbsp;</p>
+
+**Período total - Janeiro a Novembro**
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\AZ_gripe_total_total.RData")
+
+AZ_gripe_total_total %>% 
+  kbl(format = "html", caption = "Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca para Síndrome gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.", 
+      col.names = c("Status vacinal", "Pré-Vacinado", "1ª dose + 13 dias")) %>% 
+  kable_paper(bootstrap_options = "striped", full_width = T, position = "right", font_size = 15) %>%
+  add_footnote(c("Primeira coluna - não ter recebido nenhuma dose como período de referência (Pré-vacinado).", "Segunda coluna - período entre 1ª dose até 13º dia como referência.", " Modelo de Cox ajustado por sexo, idade e data de aplicação da primeira dose da vacina"), notation = "symbol")
+
+
+```
+
+
+<p>&nbsp;</p>
+
+**Período Gamma - Janeiro a Maio**
+
+```{r, warning=F, echo=F, message=F}
+
+library(tidyverse)
+library(kableExtra)
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\AZ_gripe_total_gamma.RData")
+
+AZ_gripe_total_gamma %>% 
+  kbl(format = "html", caption = "Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca para Síndrome gripal por SarsCov2 durante o período em que a variante Gamma era prevalente no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.", 
+      col.names = c("Status vacinal", "Pré-Vacinado", "1ª dose + 13 dias")) %>% 
+  kable_paper(bootstrap_options = "striped", full_width = T, position = "right", font_size = 15) %>%
+  add_footnote(c("Primeira coluna - não ter recebido nenhuma dose como período de referência (Pré-vacinado).", "Segunda coluna - período entre 1ª dose até 13º dia como referência.", " Modelo de Cox ajustado por sexo, idade e data de aplicação da primeira dose da vacina"), notation = "symbol")
+
+
+
+```
+
+
+
+<p>&nbsp;</p>
+
+**Período Delta - Julho a Novembro**
+
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\AZ_gripe_total_delta.RData")
+
+AZ_gripe_total_delta %>% 
+  kbl(format = "html", caption = "Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca para Síndrome gripal por SarsCov2 durante o período em que a variante DELTA era prevalente no estado do Rio de Janeiro entre Julho a Novembro de 2021.", 
+      col.names = c("Status vacinal", "Pré-Vacinado", "1ª dose + 13 dias")) %>% 
+  kable_paper(bootstrap_options = "striped", full_width = T, position = "right", font_size = 15) %>%
+  add_footnote(c("Primeira coluna - não ter recebido nenhuma dose como período de referência (Pré-vacinado).", "Segunda coluna - período entre 1ª dose até 13º dia como referência.", " Modelo de Cox ajustado por sexo, idade e data de aplicação da primeira dose da vacina"), notation = "symbol")
+
+```
+
+
+<p>&nbsp;</p>
+
+***Divisão em três grupos***
+
+```{r, warning=F, echo=F, message=F}
+
+load(file = "C:\\Users\\Adelson\\Desktop\\bd vacinas\\novo\\AZ_gripe1_nova.RData")
+
+AZ_gripe1_nova %>% 
+  kbl(format = "html", caption = "Hazard Ratios (IC 95%) para indivíduos vacinados com uma ou duas doses de AstraZeneca para Síndrome gripal por SarsCov2 no estado do Rio de Janeiro entre Janeiro a Novembro de 2021.", 
+      col.names = c("Status vacinal", "Hazard Ratios (IC 95%)")) %>% 
+  kable_paper(bootstrap_options = "striped", full_width = T, position = "right", font_size = 15) %>%
+  add_footnote(c("Pré-vacinado: do dia 19 de janeiro até o 13º dias após a primeira dose.", "Parcial: 14 dias após a primeira dose até 13 dias após a segunda dose.", "Totalmente vacinaddo: 14 dias da segunda dose até a tomada da terceira dose.", "Reforço: após a terceira dose de reforço." , " Modelo de Cox ajustado por sexo, idade e data de aplicação da primeira dose da vacina"), notation = "symbol")
+
+```
+
+
+
+
+----

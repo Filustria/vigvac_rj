@@ -19,3 +19,7 @@ tab:unnamed-chunk-19
 tab:unnamed-chunk-20
 tab:unnamed-chunk-21
 tab:unnamed-chunk-22
+tab:unnamed-chunk-23
+tab:unnamed-chunk-24
+tab:unnamed-chunk-25
+tab:unnamed-chunk-26
